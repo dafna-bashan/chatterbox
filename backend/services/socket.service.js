@@ -31,14 +31,17 @@ function setupSocketAPI(http) {
         })
         socket.on('chat-send-msg', msg => {
             // logger.info(`New chat msg from socket [id: ${socket.id}], emitting to topic ${socket.myTopic}`)
-            console.log(`New chat msg from socket [id: ${socket.id}], emitting to topic ${socket.myTopic}`);
+            console.log(`New chat msg from socket [id: ${socket.id}], emitting to topic ${socket.myTopic}, ${msg.txt}`);
 
             // emits to all sockets:
             // gIo.emit('chat-add-msg', msg)
+            // emits emits to all sockets except the sender
+            socket.broadcast.emit('chat-add-msg', msg)
             // emits only to sockets in the same room
             // gIo.to(socket.myTopic).emit('chat-add-msg', msg)
             // emits only to sockets in the same room except the sender
-            socket.broadcast.to(socket.myTopic).emit('chat-add-msg', msg)
+            // socket.broadcast.to(socket.myTopic).emit('chat-add-msg', msg)
+
         })
         socket.on('user-watch', userId => {
             // logger.info(`user-watch from socket [id: ${socket.id}], on user ${userId}`)

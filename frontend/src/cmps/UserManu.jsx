@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { logout } from '../store/actions/authActions'
+import { Link } from 'react-router-dom'
 
 export function UserManu({ closeFunc }) {
 
@@ -14,8 +15,8 @@ export function UserManu({ closeFunc }) {
 
     return (
         <div className="user-manu" onClick={closeFunc}>
-            <div>My Profile</div>
-            <div>Group Chat</div>
+            <Link to="/user"><div>My Profile</div></Link>
+            <Link to="/chat"><div>Group Chat</div></Link>
             <div></div>
             <div onClick={onLogout}>Logout</div>
         </div>

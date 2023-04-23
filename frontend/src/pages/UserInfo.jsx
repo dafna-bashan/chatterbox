@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { NavBar } from '../cmps/NavBar'
 import userImg from '../assets/img/user-img.png'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -31,7 +30,6 @@ export function UserInfo() {
     const { firstName, lastName, bio, phone, imgUrl = userImg, email } = loggedInUser
     return (
         <React.Fragment>
-            <NavBar />
             <div className="user-info">
                 <div className="center">
                     <div className="title">Personal info</div>

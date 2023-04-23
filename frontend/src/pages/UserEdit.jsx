@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { cloudinaryService } from '../services/cloudinaryService'
 import { useNavigate } from 'react-router-dom'
-import { NavBar } from '../cmps/NavBar'
 import userImg from '../assets/img/user-img.png'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
@@ -65,7 +64,6 @@ export function UserEdit() {
 
     return (
         <React.Fragment>
-            <NavBar />
             <div className="user-edit frame">
                 <div className="back"><Link to="/user"><span>&#60;</span> Back</Link></div>
                 <div className="profile">Change Info</div>

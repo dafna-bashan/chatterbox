@@ -79,7 +79,7 @@ export function AuthFormCmp({ type, title, btnTxt, submitFunc, bottomLine }) {
 
     return (
         <div className="form-container">
-            <div className="main-title">Auth app</div>
+            {/* <div className="main-title">Auth app</div> */}
             <div className="title">{title}</div>
             <Formik
                 initialValues={credentials}

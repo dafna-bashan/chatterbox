@@ -1,0 +1,93 @@
+.user-edit {
+    padding: 30px 48px;
+    margin : 30px 0;
+
+    img {
+        width       : 72px;
+        height      : 72px;
+        margin-right: 27px;
+    }
+
+    form {
+        font-family: noto-sans-500;
+        font-size  : 13px;
+        line-height: 18px;
+    }
+
+    label:not(.img-label) {
+        color        : #4F4F4F;
+        margin-bottom: 4px;
+    }
+
+    .img-label {
+        color: #828282;
+    }
+
+    .profile-sub {
+        margin-bottom: 25px;
+    }
+
+    .img-con {
+        margin-bottom: 32px;
+    }
+
+    input,
+    textarea {
+        color           : #828282;
+        // color        : #BDBDBD;
+        padding         : 17px;
+        border          : 1px solid #828282;
+        border-radius   : 12px;
+        resize          : none;
+        margin-bottom   : 24px;
+        width           : 415px;
+    }
+
+    button {
+        height       : 38px;
+        background   : #2F80ED;
+        font-size    : 16px;
+        line-height  : 22px;
+        border-radius: 8px;
+        width        : 82px;
+        border       : none;
+        font-weight  : 500;
+        color        : #FFFFFF;
+        padding      : 8px 0px;
+    }
+}
+
+.back {
+    font-size  : 18px;
+    line-height: 25px;
+    position   : relative;
+    top        : -70px;
+    left       : -40px;
+
+    a {
+        color: #2D9CDB;
+    }
+
+    span {
+        margin-right: 14px;
+    }
+}
+
+@media (max-width: $narrow-breakpoint) {
+    .user-edit {
+        .back {
+            left: 0;
+        }
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .user-edit {
+        padding: 30px 23px;
+
+        input,
+        textarea {
+            width: 100%;
+        }
+    }
+}

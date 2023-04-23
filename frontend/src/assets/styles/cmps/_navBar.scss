@@ -1,0 +1,36 @@
+.nav-bar {
+    width  : 100vw;
+    padding: 27px 72px;
+
+    img {
+        height      : 32px;
+        width       : 32px;
+        margin-right: 10px;
+    }
+
+    .user {
+        display    : flex;
+        align-items: center;
+        cursor     : pointer;
+    }
+
+    .user-manu-con {
+        position     : absolute;
+        right        : 70px;
+        top          : 70px;
+        width        : 188px;
+        height       : 174px;
+        border-radius: 12px;
+
+    }
+}
+
+@media (max-width: $narrow-breakpoint) {
+    .nav-bar {
+        padding: 23px;
+
+        .username {
+            display: none;
+        }
+    }
+}

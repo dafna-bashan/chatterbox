@@ -1,0 +1,28 @@
+[
+    {
+        "_id": "",
+        "title": "",
+        "description": "",
+        "members": [
+            {
+                "_id": "",
+                "firstName": "",
+                "lastName": "",
+                "joined": 0,
+                "left": 0
+            }
+        ],
+        "msgs": [
+            {
+                "_id": "",
+                "from": {
+                    "_id": "",
+                    "firstName": "",
+                    "lastName": ""
+                },
+                "txt": "",
+                "sent": 0
+            }
+        ]
+    }
+]

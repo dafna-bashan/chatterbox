@@ -35,7 +35,7 @@ function setupSocketAPI(http) {
 
             // emits to all sockets:
             // gIo.emit('chat-add-msg', msg)
-            // emits emits to all sockets except the sender
+            // emits to all sockets except the sender
             socket.broadcast.emit('chat-add-msg', msg)
             // emits only to sockets in the same room
             // gIo.to(socket.myTopic).emit('chat-add-msg', msg)

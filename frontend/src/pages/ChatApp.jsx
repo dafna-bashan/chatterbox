@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import { socketService, SOCKET_EMIT_SEND_MSG, SOCKET_EVENT_ADD_MSG } from '../services/socket.service'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
-export const ChatApp = () => {
+export function ChatApp() {
 
+    const loggedInUser = useSelector(state => state.userModule.loggedInUser)
+    const navigate = useNavigate()
+    
     const [msg, setMsg] = useState({ txt: '' })
     const [msgs, setMsgs] = useState([])
 
     useEffect(() => {
+        if (!loggedInUser) navigate('/login')
         socketService.on(SOCKET_EVENT_ADD_MSG, addMsg)
         return () => {
             socketService.off(SOCKET_EVENT_ADD_MSG, addMsg)
-         
+
         }
-    }, [])
+    }, [loggedInUser, navigate])
 
     function handleChange(ev) {
         const { name, value } = ev.target

@@ -8,3 +8,13 @@
 4/25/2023, 9:54:43 AM - INFO - Server is running on port: 3030 
 4/25/2023, 9:58:26 AM - INFO - Server is running on port: 3030 
 4/25/2023, 10:06:35 AM - INFO - Server is running on port: 3030 
+4/25/2023, 10:28:40 AM - DEBUG - auth.service - login with email: dafnaba1@gmail.com 
+4/25/2023, 10:28:40 AM - INFO - User login:  | {"_id":"64252e83e65e964cc8cf186a","email":"dafnaba1@gmail.com","firstName":"דפנה","lastName":"בשן","bio":"la la la ba bacczxzcz fsddf","phone":"123456789","imgUrl":""} 
+4/27/2023, 10:06:55 AM - DEBUG - auth.service - login with email: dafnaba1@gmail.com 
+4/27/2023, 10:06:56 AM - INFO - User login:  | {"_id":"64252e83e65e964cc8cf186a","email":"dafnaba1@gmail.com","firstName":"דפנה","lastName":"בשן","bio":"la la la ba bacczxzcz fsddf","phone":"123456789","imgUrl":""} 
+4/30/2023, 12:38:13 PM - DEBUG - auth.service - login with email: dafnaba1@gmail.com 
+4/30/2023, 12:38:15 PM - INFO - User login:  | {"_id":"64252e83e65e964cc8cf186a","email":"dafnaba1@gmail.com","firstName":"דפנה","lastName":"בשן","bio":"la la la ba bacczxzcz fsddf","phone":"123456789","imgUrl":""} 
+4/30/2023, 1:02:06 PM - DEBUG - auth.service - login with email: dafnaba1@gmail.com 
+4/30/2023, 1:02:06 PM - INFO - User login:  | {"_id":"64252e83e65e964cc8cf186a","email":"dafnaba1@gmail.com","firstName":"דפנה","lastName":"בשן","bio":"la la la ba bacczxzcz fsddf","phone":"123456789","imgUrl":""} 
+4/30/2023, 2:19:35 PM - DEBUG - auth.service - login with email: dafnaba1@gmail.com 
+4/30/2023, 2:19:35 PM - INFO - User login:  | {"_id":"64252e83e65e964cc8cf186a","email":"dafnaba1@gmail.com","firstName":"דפנה","lastName":"בשן","bio":"la la la ba bacczxzcz fsddf","phone":"123456789","imgUrl":""} 

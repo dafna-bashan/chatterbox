@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react'
 import { socketService, SOCKET_EMIT_SEND_MSG, SOCKET_EVENT_ADD_MSG } from '../services/socket.service'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { ChatSideBar } from '../cmps/ChatSideBar'
+import { MsgList } from '../cmps/MsgList'
+import { AddMsg } from '../cmps/AddMsg'
 
 export function ChatApp() {
 
     const loggedInUser = useSelector(state => state.userModule.loggedInUser)
     const navigate = useNavigate()
-    
+
     const [msg, setMsg] = useState({ txt: '' })
     const [msgs, setMsgs] = useState([])
 
@@ -38,14 +41,12 @@ export function ChatApp() {
     }
 
     return (
-        <div>
-            <ul>
-                {msgs.map((msg, idx) => <li key={idx}>{msg.txt}</li>)}
-            </ul>
-            <form onSubmit={sendMsg}>
-                <input type="text" name="txt" placeholder="enter a message" value={msg.txt} onChange={handleChange} />
-                <button>Send</button>
-            </form>
+        <div className="chat-app flex">
+            <ChatSideBar />
+            <div className="chat-container flex column full">
+                <MsgList msgs={msgs} />
+                <AddMsg msg={msg} handleChange={handleChange} sendMsg={sendMsg}/>
+            </div>
         </div>
     )
 }

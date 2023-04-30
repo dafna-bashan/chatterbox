@@ -1,0 +1,25 @@
+.add-msg {
+    margin   : 10px;
+    font-size: 14px;
+
+    input {
+        height       : 52px;
+        border-radius: 8px;
+        border       : 1px solid #e0e0e0;
+        padding-left : 15px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    button {
+        position     : absolute;
+        right        : 15px;
+        bottom       : 15px;
+        height       : 42px;
+        border-radius: 8px;
+        border       : none;
+        padding      : 0 15px;
+    }
+}

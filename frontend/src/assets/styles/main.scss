@@ -17,6 +17,7 @@
 @import 'pages/login';
 @import 'pages/userInfo';
 @import 'pages/userEdit';
+@import 'pages/chatApp';
 
 
 // Components
@@ -24,15 +25,18 @@
 @import 'cmps/navBar';
 @import 'cmps/userManu';
 @import 'cmps/loader';
-
-
+@import 'cmps/chatSideBar';
+@import 'cmps/msgList';
+@import 'cmps/chatPreview';
+@import 'cmps/addMsg';
+@import 'cmps/msgPreview';
 
 
 main {
     display          : flex;
     flex-direction: column;
-    align-items      : center;
-    justify-content  : center;
-    // height           : 100vh;
+    // align-items      : center;
+    // justify-content  : center;
+    height           : 100vh;
     width            : 100vw;
 }

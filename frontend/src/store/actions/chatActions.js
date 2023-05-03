@@ -16,15 +16,30 @@ export function loadChats() {
   }
 }
 
-export function loadChat() {
+export function loadChat(chatId) {
   return async dispatch => {
     try {
       dispatch({ type: 'LOADING_START' })
-      const chat = await chatService.getById()
+      const chat = await chatService.getById(chatId)
       dispatch({ type: 'SET_CHAT', chat })
       return chat
     } catch (err) {
       console.log('ChatActions: err in loadChat', err)
+    } finally {
+      dispatch({ type: 'LOADING_DONE' })
+    }
+  }
+}
+
+export function addChat() {
+  return async dispatch => {
+    try {
+      dispatch({ type: 'LOADING_START' })
+      const chat = await chatService.add()
+      dispatch({ type: 'ADD_CHAT', chat })
+      return chat
+    } catch (err) {
+      console.log('ChatActions: err in addChat', err)
     } finally {
       dispatch({ type: 'LOADING_DONE' })
     }

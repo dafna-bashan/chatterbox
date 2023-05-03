@@ -1,6 +1,12 @@
 const initialState = {
   chats: [],
-  currChat: {}
+  currChat: {
+    _id: "",
+    title: "",
+    description: "",
+    members: [],
+    msgs: []
+  }
 }
 
 export function chatReducer(state = initialState, action = {}) {
@@ -10,7 +16,7 @@ export function chatReducer(state = initialState, action = {}) {
     case 'SET_CHATS':
       return { ...state, chats: [...action.chats] }
     case 'ADD_CHAT':
-      return { ...state, chats: [...state.chats, action.chat] };
+      return { ...state, currChat: action.chat, chats: [...state.chats, action.chat] };
     case 'REMOVE_CHAT':
       return {
         ...state,

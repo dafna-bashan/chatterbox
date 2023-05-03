@@ -4,6 +4,7 @@ import { httpService } from './httpService';
 export const chatService = {
     query,
     getById,
+    add,
     remove,
     update
 };
@@ -21,6 +22,10 @@ function getById(chatId) {
     return httpService.get(`chat/${chatId}`);
 }
 
+function add(chat) {
+    // return storageService.post('chat')
+    return httpService.post(`chat`, chat);
+}
 
 function remove(chatId) {
     // return storageService.remove('chat', chatId)

@@ -1,5 +1,15 @@
-.msg-list{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.msg-list {
+    overflow-y: scroll;
+
+    // * {
+    //     overflow-anchor: none;
+    // }
+
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: flex-end;
+    // :last-child {
+    //     overflow-anchor: auto;
+    //     height         : 1px;
+    // }
 }

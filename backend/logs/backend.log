@@ -109,3 +109,28 @@
 5/4/2023, 9:33:34 AM - INFO - New chat msg from socket [id: 54eCJnnohc-4J_kLAAAp], emitting to topic undefined 
 5/4/2023, 9:33:53 AM - INFO - New chat msg from socket [id: 54eCJnnohc-4J_kLAAAp], emitting to topic undefined 
 5/4/2023, 9:34:02 AM - INFO - New chat msg from socket [id: p_YvUWjOCRgJ5B_gAAAt], emitting to topic undefined 
+5/4/2023, 11:40:56 AM - INFO - New chat msg from socket [id: b1y8FTuxGgHEn2dBAAAv], emitting to topic undefined 
+5/4/2023, 11:41:04 AM - INFO - New chat msg from socket [id: S0LUzyQjEEZZt05SAAA1], emitting to topic undefined 
+5/4/2023, 11:41:11 AM - INFO - New chat msg from socket [id: b1y8FTuxGgHEn2dBAAAv], emitting to topic undefined 
+5/4/2023, 11:41:19 AM - INFO - New chat msg from socket [id: S0LUzyQjEEZZt05SAAA1], emitting to topic undefined 
+5/4/2023, 11:55:51 AM - DEBUG - auth.service - signup with email: rachel@gmail.com, fullname: Rachel Green 
+5/4/2023, 11:55:51 AM - DEBUG - auth.route - new account created: {"email":"rachel@gmail.com","firstName":"Rachel","lastName":"Green","password":"$2b$10$7oVGy8MAFwdjA855Ojtj7.QS5h1w1fJuDo.IAa2SKrRRIYtbZHTh.","bio":"","phone":"","imgUrl":"","_id":"6453731775e6dbd625ef61d5"} 
+5/4/2023, 11:55:51 AM - DEBUG - auth.service - login with email: rachel@gmail.com 
+5/4/2023, 12:04:25 PM - DEBUG - auth.service - signup with email: phoebe@gmail.com, fullname: Phoebe Buffay 
+5/4/2023, 12:04:25 PM - DEBUG - auth.route - new account created: {"email":"phoebe@gmail.com","firstName":"Phoebe","lastName":"Buffay","password":"$2b$10$kdAjKuvMNBfbl4IjQ8VGTOSbjL8I8E85wu18EHpsChX1OXA/aqpiO","bio":"","phone":"","imgUrl":"","_id":"6453751975e6dbd625ef61d6"} 
+5/4/2023, 12:04:25 PM - DEBUG - auth.service - login with email: phoebe@gmail.com 
+5/4/2023, 12:05:21 PM - DEBUG - auth.service - signup with email: monica@gmail.com, fullname: Monica Geller 
+5/4/2023, 12:05:21 PM - DEBUG - auth.route - new account created: {"email":"monica@gmail.com","firstName":"Monica","lastName":"Geller","password":"$2b$10$yIWLQ8RmCwL98DXyT9rM4.pAZMHPijsfLzakzRorRp89N02RryYwm","bio":"","phone":"","imgUrl":"","_id":"6453755175e6dbd625ef61d7"} 
+5/4/2023, 12:05:21 PM - DEBUG - auth.service - login with email: monica@gmail.com 
+5/4/2023, 12:06:48 PM - DEBUG - auth.service - signup with email: joey@gmail.com, fullname: Joey Tribbiani 
+5/4/2023, 12:06:48 PM - DEBUG - auth.route - new account created: {"email":"joey@gmail.com","firstName":"Joey","lastName":"Tribbiani","password":"$2b$10$/bGMD7XVI7UEso35864CWeji8UjibF.K0IXv3LNitVeLEj8N312my","bio":"","phone":"","imgUrl":"","_id":"645375a875e6dbd625ef61d8"} 
+5/4/2023, 12:06:48 PM - DEBUG - auth.service - login with email: joey@gmail.com 
+5/4/2023, 12:19:59 PM - DEBUG - auth.service - signup with email: ross@gmail.com, fullname: Ross Geller 
+5/4/2023, 12:20:00 PM - DEBUG - auth.route - new account created: {"email":"ross@gmail.com","firstName":"Ross","lastName":"Geller","password":"$2b$10$WTFuMWph8LqpM8tcFgEcgewzO9NHocA9HLs2H9lTypH6WCD06EBgK","bio":"","phone":"","imgUrl":"","_id":"645378c075e6dbd625ef61d9"} 
+5/4/2023, 12:20:00 PM - DEBUG - auth.service - login with email: ross@gmail.com 
+5/4/2023, 12:20:58 PM - DEBUG - auth.service - signup with email: chandler@gmail.com, fullname: Chandler Bing 
+5/4/2023, 12:20:59 PM - DEBUG - auth.route - new account created: {"email":"chandler@gmail.com","firstName":"Chandler","lastName":"Bing","password":"$2b$10$ghz1CZRHjIIb9vjI3nCC7OJt/Hk2kZPm7uSwQ.aBF2m.9dougwq36","bio":"","phone":"","imgUrl":"","_id":"645378fb75e6dbd625ef61da"} 
+5/4/2023, 12:20:59 PM - DEBUG - auth.service - login with email: chandler@gmail.com 
+5/4/2023, 12:32:36 PM - INFO - Server is running on port: 3030 
+5/4/2023, 12:33:06 PM - DEBUG - auth.service - login with email: rachel@gmail.com 
+5/4/2023, 12:33:08 PM - INFO - User login:  | {"_id":"6453731775e6dbd625ef61d5","email":"rachel@gmail.com","firstName":"Rachel","lastName":"Green","bio":"","phone":"","imgUrl":"https://res.cloudinary.com/depjjubya/image/upload/v1683191002/rachel_c4swwf.png"} 

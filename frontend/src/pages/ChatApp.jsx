@@ -7,6 +7,7 @@ import { MsgList } from '../cmps/MsgList'
 import { AddMsg } from '../cmps/AddMsg'
 import { addChat, loadChat, loadChats, updateChat } from '../store/actions/chatActions'
 import { utilService } from '../services/utilService'
+import { ChatHeader } from '../cmps/ChatHeader'
 
 export function ChatApp() {
 
@@ -28,7 +29,7 @@ export function ChatApp() {
     //     if (currChat.msgs.length) setMsgs(currChat.msgs)
     // }, [currChat])
 
-    function loadDefaultChat(){
+    function loadDefaultChat() {
         dispatch(loadChat('64521771d24e76ba01009bc3'))
     }
 
@@ -83,7 +84,7 @@ export function ChatApp() {
 
     return (
         <div className="chat-app flex">
-            {/* <ChatSideBar /> */}
+            <ChatSideBar />
             <div className="chat-container flex column full">
                 {currChat.msgs.length && <MsgList msgs={currChat.msgs} />}
                 <AddMsg msg={msg} handleChange={handleChange} sendMsg={sendMsg} />

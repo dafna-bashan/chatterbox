@@ -134,3 +134,4 @@
 5/4/2023, 12:32:36 PM - INFO - Server is running on port: 3030 
 5/4/2023, 12:33:06 PM - DEBUG - auth.service - login with email: rachel@gmail.com 
 5/4/2023, 12:33:08 PM - INFO - User login:  | {"_id":"6453731775e6dbd625ef61d5","email":"rachel@gmail.com","firstName":"Rachel","lastName":"Green","bio":"","phone":"","imgUrl":"https://res.cloudinary.com/depjjubya/image/upload/v1683191002/rachel_c4swwf.png"} 
+5/4/2023, 2:03:24 PM - INFO - New chat msg from socket [id: --DB0FdgxrrikBXRAAAB], emitting to topic undefined 

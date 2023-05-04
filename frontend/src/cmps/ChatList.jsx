@@ -1,14 +1,10 @@
 import React from 'react'
 import { ChatPreview } from './ChatPreview'
 
-export function ChatList() {
+export function ChatList({ chats, loggedInUser }) {
   return (
     <div>
-        <ChatPreview/>
-        <ChatPreview/>
-        <ChatPreview/>
-        <ChatPreview/>
-        <ChatPreview/>
+      {chats.map(chat => <ChatPreview chat={chat} loggedInUser={loggedInUser}/>)}
     </div>
   )
 }

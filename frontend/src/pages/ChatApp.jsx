@@ -8,12 +8,15 @@ import { AddMsg } from '../cmps/AddMsg'
 import { addChat, loadChat, loadChats, updateChat } from '../store/actions/chatActions'
 import { utilService } from '../services/utilService'
 import { ChatHeader } from '../cmps/ChatHeader'
+import {loadUsers} from '../store/actions/userActions'
 
 export function ChatApp() {
 
     const loggedInUser = useSelector(state => state.userModule.loggedInUser)
     const currChat = useSelector(state => state.chatModule.currChat)
-    // const chats = useSelector(state => state.chatModule.chats)
+    const chats = useSelector(state => state.chatModule.chats)
+    const users = useSelector(state => state.userModule.users)
+
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
@@ -23,6 +26,7 @@ export function ChatApp() {
     useEffect(() => {
         dispatch(loadChats())
         loadDefaultChat()
+        dispatch(loadUsers())
     }, [dispatch])
 
     // useEffect(() => {
@@ -84,7 +88,7 @@ export function ChatApp() {
 
     return (
         <div className="chat-app flex">
-            <ChatSideBar />
+            <ChatSideBar chats={chats} users={users} loggedInUser={loggedInUser}/>
             <div className="chat-container flex column full">
                 {currChat.msgs.length && <MsgList msgs={currChat.msgs} />}
                 <AddMsg msg={msg} handleChange={handleChange} sendMsg={sendMsg} />

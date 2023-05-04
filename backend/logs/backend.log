@@ -22,3 +22,90 @@
 5/3/2023, 11:10:34 AM - ERROR - Failed to add chat | MongoError: doc parameter must be an object 
 5/3/2023, 11:17:14 AM - ERROR - while finding chat undefined | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters 
 5/3/2023, 11:17:14 AM - ERROR - Failed to get chat | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters 
+5/3/2023, 2:29:16 PM - DEBUG - auth.service - signup with email: dafi@gmail.com, fullname: Dafi Bashan 
+5/3/2023, 2:29:16 PM - ERROR - Failed to signup email already exists 
+5/3/2023, 2:29:28 PM - DEBUG - auth.service - signup with email: dafi1@gmail.com, fullname: Dafi Bashan 
+5/3/2023, 2:29:28 PM - ERROR - Failed to signup email already exists 
+5/3/2023, 2:29:32 PM - DEBUG - auth.service - signup with email: dafi2@gmail.com, fullname: Dafi Bashan 
+5/3/2023, 2:29:33 PM - DEBUG - auth.route - new account created: {"email":"dafi2@gmail.com","firstName":"Dafi","lastName":"Bashan","password":"$2b$10$Scxrqu4FDjzuGPSdgghmLOWOtRbTcBqx9P3oBtAXe77uo3weCTgfW","bio":"","phone":"","imgUrl":"","_id":"6452459dd24e76ba01009bc4"} 
+5/3/2023, 2:29:33 PM - DEBUG - auth.service - login with email: dafi2@gmail.com 
+5/3/2023, 2:41:53 PM - INFO - Server is running on port: 3030 
+5/3/2023, 2:54:19 PM - INFO - Server is running on port: 3030 
+5/3/2023, 3:00:26 PM - INFO - Server is running on port: 3030 
+5/3/2023, 3:00:30 PM - INFO - New chat msg from socket [id: 8XSP42whV3xyGC5vAAAB], emitting to topic undefined 
+5/3/2023, 3:00:49 PM - INFO - New chat msg from socket [id: pYt-8Q2njvELtmA3AAAF], emitting to topic undefined 
+5/3/2023, 3:00:57 PM - INFO - New chat msg from socket [id: N4VjWIMuNBsZjpLLAAAH], emitting to topic undefined 
+5/3/2023, 3:13:29 PM - INFO - New chat msg from socket [id: U6R9lCfeDEV5AkjKAAAJ], emitting to topic undefined 
+5/3/2023, 3:13:36 PM - INFO - New chat msg from socket [id: z2vGNYz60eCpZe5JAAAL], emitting to topic undefined 
+5/3/2023, 3:19:56 PM - INFO - New chat msg from socket [id: z2vGNYz60eCpZe5JAAAL], emitting to topic undefined 
+5/3/2023, 3:20:01 PM - INFO - New chat msg from socket [id: U6R9lCfeDEV5AkjKAAAJ], emitting to topic undefined 
+5/3/2023, 3:20:10 PM - INFO - New chat msg from socket [id: U6R9lCfeDEV5AkjKAAAJ], emitting to topic undefined 
+5/3/2023, 3:20:20 PM - INFO - New chat msg from socket [id: U6R9lCfeDEV5AkjKAAAJ], emitting to topic undefined 
+5/3/2023, 3:20:25 PM - INFO - New chat msg from socket [id: 9po6XN2-3aY198-TAAAN], emitting to topic undefined 
+5/3/2023, 3:20:33 PM - INFO - New chat msg from socket [id: 9po6XN2-3aY198-TAAAN], emitting to topic undefined 
+5/3/2023, 3:20:40 PM - INFO - New chat msg from socket [id: U6R9lCfeDEV5AkjKAAAJ], emitting to topic undefined 
+5/3/2023, 3:20:44 PM - INFO - New chat msg from socket [id: 9po6XN2-3aY198-TAAAN], emitting to topic undefined 
+5/3/2023, 3:20:52 PM - INFO - New chat msg from socket [id: U6R9lCfeDEV5AkjKAAAJ], emitting to topic undefined 
+5/3/2023, 3:20:57 PM - INFO - New chat msg from socket [id: 9po6XN2-3aY198-TAAAN], emitting to topic undefined 
+5/3/2023, 3:21:19 PM - INFO - New chat msg from socket [id: aiCDob8zHzBrZyUqAAAP], emitting to topic undefined 
+5/3/2023, 3:21:25 PM - INFO - New chat msg from socket [id: A_81Vq1xI8L034aPAAAR], emitting to topic undefined 
+5/3/2023, 3:21:45 PM - INFO - New chat msg from socket [id: k6EiOn4evRzgbYsqAAAT], emitting to topic undefined 
+5/3/2023, 3:21:51 PM - INFO - New chat msg from socket [id: zdEQc1rLQAZJ_GGGAAAV], emitting to topic undefined 
+5/3/2023, 3:21:55 PM - INFO - New chat msg from socket [id: zdEQc1rLQAZJ_GGGAAAV], emitting to topic undefined 
+5/3/2023, 3:21:58 PM - INFO - New chat msg from socket [id: zdEQc1rLQAZJ_GGGAAAV], emitting to topic undefined 
+5/3/2023, 3:22:02 PM - INFO - New chat msg from socket [id: k6EiOn4evRzgbYsqAAAT], emitting to topic undefined 
+5/3/2023, 3:22:05 PM - INFO - New chat msg from socket [id: k6EiOn4evRzgbYsqAAAT], emitting to topic undefined 
+5/3/2023, 3:22:08 PM - INFO - New chat msg from socket [id: k6EiOn4evRzgbYsqAAAT], emitting to topic undefined 
+5/3/2023, 3:28:37 PM - INFO - New chat msg from socket [id: k6EiOn4evRzgbYsqAAAT], emitting to topic undefined 
+5/3/2023, 3:28:42 PM - INFO - New chat msg from socket [id: zdEQc1rLQAZJ_GGGAAAV], emitting to topic undefined 
+5/3/2023, 3:28:53 PM - INFO - New chat msg from socket [id: zdEQc1rLQAZJ_GGGAAAV], emitting to topic undefined 
+5/3/2023, 3:28:57 PM - INFO - New chat msg from socket [id: HrUtJjxPwOKKDMxQAAAX], emitting to topic undefined 
+5/3/2023, 3:29:01 PM - INFO - New chat msg from socket [id: HrUtJjxPwOKKDMxQAAAX], emitting to topic undefined 
+5/3/2023, 3:29:05 PM - INFO - New chat msg from socket [id: HrUtJjxPwOKKDMxQAAAX], emitting to topic undefined 
+5/3/2023, 3:30:35 PM - INFO - Server is running on port: 3030 
+5/3/2023, 3:30:49 PM - INFO - New chat msg from socket [id: RQYkfeK7VZs2fwMMAAAD], emitting to topic undefined 
+5/3/2023, 3:30:56 PM - INFO - New chat msg from socket [id: eara5m2YZ8KirTyqAAAB], emitting to topic undefined 
+5/3/2023, 3:30:58 PM - INFO - New chat msg from socket [id: eara5m2YZ8KirTyqAAAB], emitting to topic undefined 
+5/3/2023, 3:31:25 PM - INFO - New chat msg from socket [id: wJx3NEELGOHM6gznAAAF], emitting to topic undefined 
+5/3/2023, 3:31:31 PM - INFO - New chat msg from socket [id: NVjHx4uLEYrP7aw5AAAH], emitting to topic undefined 
+5/3/2023, 3:33:11 PM - DEBUG - auth.service - login with email: dafnaba1@gmail.com 
+5/3/2023, 3:33:12 PM - INFO - User login:  | {"_id":"64252e83e65e964cc8cf186a","email":"dafnaba1@gmail.com","firstName":"דפנה","lastName":"בשן","bio":"la la la ba bacczxzcz fsddf\njkljlm,","phone":"123456789","imgUrl":""} 
+5/3/2023, 3:33:23 PM - INFO - New chat msg from socket [id: 86u3QSVnGe9IPzf6AAAJ], emitting to topic undefined 
+5/3/2023, 3:34:01 PM - INFO - New chat msg from socket [id: 86u3QSVnGe9IPzf6AAAJ], emitting to topic undefined 
+5/3/2023, 3:34:16 PM - INFO - New chat msg from socket [id: NVjHx4uLEYrP7aw5AAAH], emitting to topic undefined 
+5/3/2023, 3:34:22 PM - INFO - New chat msg from socket [id: 86u3QSVnGe9IPzf6AAAJ], emitting to topic undefined 
+5/3/2023, 3:34:27 PM - INFO - New chat msg from socket [id: NVjHx4uLEYrP7aw5AAAH], emitting to topic undefined 
+5/3/2023, 3:35:47 PM - INFO - New chat msg from socket [id: 86u3QSVnGe9IPzf6AAAJ], emitting to topic undefined 
+5/3/2023, 3:35:52 PM - INFO - New chat msg from socket [id: NVjHx4uLEYrP7aw5AAAH], emitting to topic undefined 
+5/3/2023, 3:36:06 PM - INFO - New chat msg from socket [id: 86u3QSVnGe9IPzf6AAAJ], emitting to topic undefined 
+5/3/2023, 3:36:12 PM - INFO - New chat msg from socket [id: NVjHx4uLEYrP7aw5AAAH], emitting to topic undefined 
+5/3/2023, 3:36:31 PM - INFO - New chat msg from socket [id: zZ5Gqf7jMi6pSDiHAAAL], emitting to topic undefined 
+5/3/2023, 3:36:37 PM - INFO - New chat msg from socket [id: 86u3QSVnGe9IPzf6AAAJ], emitting to topic undefined 
+5/3/2023, 3:37:02 PM - DEBUG - auth.service - login with email: dafi2@gmail.com 
+5/3/2023, 3:37:02 PM - INFO - User login:  | {"_id":"6452459dd24e76ba01009bc4","email":"dafi2@gmail.com","firstName":"Dafi","lastName":"Bashan","bio":"","phone":"","imgUrl":""} 
+5/3/2023, 3:37:11 PM - INFO - New chat msg from socket [id: zZ5Gqf7jMi6pSDiHAAAL], emitting to topic undefined 
+5/3/2023, 3:37:16 PM - INFO - New chat msg from socket [id: 86u3QSVnGe9IPzf6AAAJ], emitting to topic undefined 
+5/3/2023, 3:37:29 PM - INFO - New chat msg from socket [id: zZ5Gqf7jMi6pSDiHAAAL], emitting to topic undefined 
+5/3/2023, 3:37:34 PM - INFO - New chat msg from socket [id: 86u3QSVnGe9IPzf6AAAJ], emitting to topic undefined 
+5/3/2023, 3:37:40 PM - INFO - New chat msg from socket [id: zZ5Gqf7jMi6pSDiHAAAL], emitting to topic undefined 
+5/3/2023, 3:42:43 PM - INFO - New chat msg from socket [id: vHWnukBaxnAzfv8pAAAX], emitting to topic undefined 
+5/3/2023, 3:42:50 PM - INFO - New chat msg from socket [id: qcqK5pjLHO1PkdZ3AAAV], emitting to topic undefined 
+5/3/2023, 3:43:03 PM - INFO - New chat msg from socket [id: vHWnukBaxnAzfv8pAAAX], emitting to topic undefined 
+5/3/2023, 3:43:36 PM - INFO - New chat msg from socket [id: qcqK5pjLHO1PkdZ3AAAV], emitting to topic undefined 
+5/3/2023, 3:43:41 PM - INFO - New chat msg from socket [id: vHWnukBaxnAzfv8pAAAX], emitting to topic undefined 
+5/3/2023, 3:43:53 PM - INFO - New chat msg from socket [id: qcqK5pjLHO1PkdZ3AAAV], emitting to topic undefined 
+5/3/2023, 3:44:21 PM - INFO - New chat msg from socket [id: vHWnukBaxnAzfv8pAAAX], emitting to topic undefined 
+5/4/2023, 9:24:29 AM - INFO - New chat msg from socket [id: kl_DOOfbCwqHvWx5AAAh], emitting to topic undefined 
+5/4/2023, 9:24:59 AM - INFO - New chat msg from socket [id: xPY6wYZwaMA-H7pUAAAj], emitting to topic undefined 
+5/4/2023, 9:25:38 AM - INFO - New chat msg from socket [id: kl_DOOfbCwqHvWx5AAAh], emitting to topic undefined 
+5/4/2023, 9:26:00 AM - INFO - New chat msg from socket [id: xPY6wYZwaMA-H7pUAAAj], emitting to topic undefined 
+5/4/2023, 9:26:41 AM - INFO - New chat msg from socket [id: Ir-MxArraiF-EsUVAAAn], emitting to topic undefined 
+5/4/2023, 9:26:56 AM - INFO - New chat msg from socket [id: Jf11M7vsnWauMbaxAAAl], emitting to topic undefined 
+5/4/2023, 9:33:08 AM - INFO - New chat msg from socket [id: rKOFFbaw7KLODlk4AAAr], emitting to topic undefined 
+5/4/2023, 9:33:14 AM - INFO - New chat msg from socket [id: 54eCJnnohc-4J_kLAAAp], emitting to topic undefined 
+5/4/2023, 9:33:23 AM - INFO - New chat msg from socket [id: rKOFFbaw7KLODlk4AAAr], emitting to topic undefined 
+5/4/2023, 9:33:26 AM - INFO - New chat msg from socket [id: rKOFFbaw7KLODlk4AAAr], emitting to topic undefined 
+5/4/2023, 9:33:31 AM - INFO - New chat msg from socket [id: 54eCJnnohc-4J_kLAAAp], emitting to topic undefined 
+5/4/2023, 9:33:34 AM - INFO - New chat msg from socket [id: 54eCJnnohc-4J_kLAAAp], emitting to topic undefined 
+5/4/2023, 9:33:53 AM - INFO - New chat msg from socket [id: 54eCJnnohc-4J_kLAAAp], emitting to topic undefined 
+5/4/2023, 9:34:02 AM - INFO - New chat msg from socket [id: p_YvUWjOCRgJ5B_gAAAt], emitting to topic undefined 

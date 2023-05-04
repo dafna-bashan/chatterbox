@@ -1,4 +1,4 @@
-// const logger = require('./logger.service')
+const logger = require('./logger.service')
 
 var gIo = null
 
@@ -30,7 +30,7 @@ function setupSocketAPI(http) {
             socket.myTopic = topic
         })
         socket.on('chat-send-msg', msg => {
-            // logger.info(`New chat msg from socket [id: ${socket.id}], emitting to topic ${socket.myTopic}`)
+            logger.info(`New chat msg from socket [id: ${socket.id}], emitting to topic ${socket.myTopic}`)
             console.log(`New chat msg from socket [id: ${socket.id}], emitting to topic ${socket.myTopic}, ${msg.txt}`);
 
             // emits to all sockets:

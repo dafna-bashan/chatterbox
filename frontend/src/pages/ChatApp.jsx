@@ -7,8 +7,8 @@ import { MsgList } from '../cmps/MsgList'
 import { AddMsg } from '../cmps/AddMsg'
 import { addChat, loadChat, loadChats, updateChat } from '../store/actions/chatActions'
 import { utilService } from '../services/utilService'
-import { ChatHeader } from '../cmps/ChatHeader'
-import {loadUsers} from '../store/actions/userActions'
+// import { ChatHeader } from '../cmps/ChatHeader'
+import { loadUsers } from '../store/actions/userActions'
 
 export function ChatApp() {
 
@@ -27,7 +27,7 @@ export function ChatApp() {
         dispatch(loadChats())
         loadDefaultChat()
         dispatch(loadUsers())
-    }, [dispatch])
+    }, [])
 
     // useEffect(() => {
     //     if (currChat.msgs.length) setMsgs(currChat.msgs)
@@ -40,9 +40,9 @@ export function ChatApp() {
 
     useEffect(() => {
         if (!loggedInUser) navigate('/login')
-        socketService.on(SOCKET_EVENT_ADD_MSG, loadDefaultChat)
+        socketService.on(SOCKET_EVENT_ADD_MSG, onLoadChat)
         return () => {
-            socketService.off(SOCKET_EVENT_ADD_MSG, loadDefaultChat)
+            socketService.off(SOCKET_EVENT_ADD_MSG, onLoadChat)
 
         }
     }, [loggedInUser, navigate])
@@ -54,7 +54,7 @@ export function ChatApp() {
 
     function sendMsg(ev) {
         ev.preventDefault()
-        socketService.emit(SOCKET_EMIT_SEND_MSG, msg)
+        socketService.emit(SOCKET_EMIT_SEND_MSG, currChat._id)
         // for now - we add the msg ourself
         addMsg(msg)
         setMsg({ txt: '' })
@@ -85,10 +85,25 @@ export function ChatApp() {
     //     }
     // }, [msgs, dispatch])
 
+    const miniLoggedInUser = {
+        _id: loggedInUser._id,
+        firstName: loggedInUser.firstName,
+        lastName: loggedInUser.lastName
+    }
+
+    function onAddChat(selectedUser) {
+        console.log('add chat');
+        const members = [selectedUser, miniLoggedInUser]
+        dispatch(addChat({ members }))
+    }
+
+    function onLoadChat(chatId){
+        dispatch(loadChat(chatId))
+    }
 
     return (
         <div className="chat-app flex">
-            <ChatSideBar chats={chats} users={users} loggedInUser={loggedInUser}/>
+            <ChatSideBar chats={chats} users={users} loggedInUser={loggedInUser} onAddChat={onAddChat} onLoadChat={onLoadChat}/>
             <div className="chat-container flex column full">
                 {currChat.msgs.length && <MsgList msgs={currChat.msgs} />}
                 <AddMsg msg={msg} handleChange={handleChange} sendMsg={sendMsg} />

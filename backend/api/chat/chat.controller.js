@@ -24,6 +24,7 @@ async function getChats(req, res) {
 
 async function addChat(req, res) {
     try {
+        console.log('controller', req.body);
         const savedChat = await chatService.add(req.body)
         res.send(savedChat)
     } catch (err) {

@@ -66,15 +66,24 @@ async function update(chat) {
 
 async function add(chat) {
     console.log('chat service', chat)
+    const newChat = {
+        title: chat.title,
+        description: chat.description,
+        members: chat.members,
+        msgs: []
+    }
     try {
         const collection = await dbService.getCollection('chat')
-        await collection.insertOne(chat)
-        return chat
+        await collection.insertOne(newChat)
+        return newChat
     } catch (err) {
         logger.error('cannot insert chat', err)
         throw err
     }
 }
+
+
+
 
 
 

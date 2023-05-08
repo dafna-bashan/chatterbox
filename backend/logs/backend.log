@@ -135,3 +135,36 @@
 5/4/2023, 12:33:06 PM - DEBUG - auth.service - login with email: rachel@gmail.com 
 5/4/2023, 12:33:08 PM - INFO - User login:  | {"_id":"6453731775e6dbd625ef61d5","email":"rachel@gmail.com","firstName":"Rachel","lastName":"Green","bio":"","phone":"","imgUrl":"https://res.cloudinary.com/depjjubya/image/upload/v1683191002/rachel_c4swwf.png"} 
 5/4/2023, 2:03:24 PM - INFO - New chat msg from socket [id: --DB0FdgxrrikBXRAAAB], emitting to topic undefined 
+5/4/2023, 2:16:07 PM - INFO - Server is running on port: 3030 
+5/4/2023, 2:16:40 PM - INFO - Server is running on port: 3030 
+5/8/2023, 9:23:30 AM - INFO - Server is running on port: 3030 
+5/8/2023, 9:28:37 AM - INFO - Server is running on port: 3030 
+5/8/2023, 9:29:38 AM - INFO - Server is running on port: 3030 
+5/8/2023, 9:30:50 AM - INFO - Server is running on port: 3030 
+5/8/2023, 9:49:13 AM - INFO - Server is running on port: 3030 
+5/8/2023, 9:57:12 AM - INFO - New chat msg from socket [id: AgdjdCHNvOiO_ScuAAAF], emitting to topic undefined 
+5/8/2023, 10:07:49 AM - INFO - Server is running on port: 3030 
+5/8/2023, 10:08:03 AM - INFO - Server is running on port: 3030 
+5/8/2023, 10:10:28 AM - INFO - Server is running on port: 3030 
+5/8/2023, 10:13:36 AM - DEBUG - auth.service - login with email: dafnaba1@gmail.com 
+5/8/2023, 10:13:37 AM - ERROR - Failed to Login Invalid email or password 
+5/8/2023, 10:16:51 AM - INFO - Server is running on port: 3030 
+5/8/2023, 10:17:32 AM - DEBUG - auth.service - login with email: rachel@gmail.com 
+5/8/2023, 10:17:34 AM - INFO - User login:  | {"_id":"6453731775e6dbd625ef61d5","email":"rachel@gmail.com","firstName":"Rachel","lastName":"Green","bio":"","phone":"","imgUrl":"https://res.cloudinary.com/depjjubya/image/upload/v1683191002/rachel_c4swwf.png"} 
+5/8/2023, 10:42:01 AM - INFO - New chat msg from socket [id: 8mMp3bVkT-rki3P4AAAF], emitting to topic undefined 
+5/8/2023, 10:54:01 AM - ERROR - while finding chat [object Object] | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters 
+5/8/2023, 10:54:01 AM - ERROR - Failed to get chat | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters 
+5/8/2023, 10:55:08 AM - INFO - New chat msg from socket [id: kKXPPayuBtvLezxVAAAJ], emitting to topic undefined 
+5/8/2023, 10:55:45 AM - DEBUG - auth.service - login with email: phoebe@gmail.com 
+5/8/2023, 10:55:45 AM - INFO - User login:  | {"_id":"6453751975e6dbd625ef61d6","email":"phoebe@gmail.com","firstName":"Phoebe","lastName":"Buffay","bio":"","phone":"","imgUrl":"https://res.cloudinary.com/depjjubya/image/upload/v1683191074/phoebe_l3z28b.png"} 
+5/8/2023, 11:06:01 AM - ERROR - while finding chat [object Object] | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters 
+5/8/2023, 11:06:01 AM - ERROR - Failed to get chat | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters 
+5/8/2023, 11:06:34 AM - ERROR - while finding chat [object Object] | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters 
+5/8/2023, 11:06:34 AM - ERROR - Failed to get chat | Error: Argument passed in must be a single String of 12 bytes or a string of 24 hex characters 
+5/8/2023, 11:08:34 AM - INFO - New chat msg from socket [id: 2MywPIQOto1NlgJjAAAN], emitting to topic undefined 
+5/8/2023, 11:09:06 AM - INFO - New chat msg from socket [id: GotbHg5g70jE_YAQAAAP], emitting to topic undefined 
+5/8/2023, 11:11:17 AM - INFO - New chat msg from socket [id: GotbHg5g70jE_YAQAAAP], emitting to topic undefined 
+5/8/2023, 11:11:34 AM - INFO - New chat msg from socket [id: 2MywPIQOto1NlgJjAAAN], emitting to topic undefined 
+5/8/2023, 11:11:41 AM - INFO - New chat msg from socket [id: GotbHg5g70jE_YAQAAAP], emitting to topic undefined 
+5/8/2023, 11:11:55 AM - INFO - New chat msg from socket [id: E23JhjOCVs1MSKY_AAAR], emitting to topic undefined 
+5/8/2023, 11:12:01 AM - INFO - New chat msg from socket [id: GotbHg5g70jE_YAQAAAP], emitting to topic undefined 

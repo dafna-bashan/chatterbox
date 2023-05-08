@@ -31,13 +31,13 @@ export function loadChat(chatId) {
   }
 }
 
-export function addChat() {
+export function addChat(chat) {
   return async dispatch => {
     try {
       dispatch({ type: 'LOADING_START' })
-      const chat = await chatService.add()
-      dispatch({ type: 'ADD_CHAT', chat })
-      return chat
+      const newChat = await chatService.add(chat)
+      dispatch({ type: 'SET_CHAT', chat: newChat })
+      return newChat
     } catch (err) {
       console.log('ChatActions: err in addChat', err)
     } finally {

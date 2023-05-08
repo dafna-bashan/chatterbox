@@ -3,7 +3,7 @@ import { ChatList } from './ChatList'
 import { SearchBar } from './SearchBar'
 import { SearchResultsList } from './SearchResultsList'
 
-export function ChatSideBar({ chats, users, loggedInUser }) {
+export function ChatSideBar({ chats, users, loggedInUser, onAddChat, onLoadChat }) {
 
     const [isSearching, setIsSearching] = useState(false)
 
@@ -13,11 +13,12 @@ export function ChatSideBar({ chats, users, loggedInUser }) {
         else setIsSearching(true)
     }
 
+
     return (
         <div className="chat-side-bar">
             <SearchBar toggleSearch={toggleSearch} />
-            {!isSearching && <ChatList chats={chats} loggedInUser={loggedInUser}/>}
-            {isSearching && <SearchResultsList results={users} />}
+            {!isSearching && <ChatList chats={chats} loggedInUser={loggedInUser} onLoadChat={onLoadChat}/>}
+            {isSearching && <SearchResultsList results={users} onAddChat={onAddChat} />}
         </div>
     )
 }

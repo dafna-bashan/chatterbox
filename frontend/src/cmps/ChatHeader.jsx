@@ -7,7 +7,7 @@ export function ChatHeader() {
     const loggedInUser = useSelector(state => state.userModule.loggedInUser)
     const isGroupChat = currChat.members.length > 2
     const otherMembers = currChat.members.filter(member => member._id !== loggedInUser._id)
-    console.log(currChat.title, isGroupChat, otherMembers);
+    // console.log(currChat.title, isGroupChat, otherMembers);
 
     return (
         <div className="chat-header full">

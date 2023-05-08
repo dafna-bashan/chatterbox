@@ -168,3 +168,27 @@
 5/8/2023, 11:11:41 AM - INFO - New chat msg from socket [id: GotbHg5g70jE_YAQAAAP], emitting to topic undefined 
 5/8/2023, 11:11:55 AM - INFO - New chat msg from socket [id: E23JhjOCVs1MSKY_AAAR], emitting to topic undefined 
 5/8/2023, 11:12:01 AM - INFO - New chat msg from socket [id: GotbHg5g70jE_YAQAAAP], emitting to topic undefined 
+5/8/2023, 11:17:13 AM - INFO - New chat msg from socket [id: GotbHg5g70jE_YAQAAAP], emitting to topic undefined 
+5/8/2023, 11:17:30 AM - INFO - New chat msg from socket [id: -dOKkM4zm_XTqlSxAAAT], emitting to topic undefined 
+5/8/2023, 11:17:36 AM - INFO - New chat msg from socket [id: GotbHg5g70jE_YAQAAAP], emitting to topic undefined 
+5/8/2023, 11:20:23 AM - INFO - Server is running on port: 3030 
+5/8/2023, 11:25:25 AM - INFO - Server is running on port: 3030 
+5/8/2023, 11:25:54 AM - INFO - Server is running on port: 3030 
+5/8/2023, 11:26:41 AM - INFO - Server is running on port: 3030 
+5/8/2023, 11:26:57 AM - INFO - Server is running on port: 3030 
+5/8/2023, 11:31:02 AM - INFO - Server is running on port: 3030 
+5/8/2023, 11:36:16 AM - INFO - Server is running on port: 3030 
+5/8/2023, 11:37:43 AM - INFO - Server is running on port: 3030 
+5/8/2023, 12:52:22 PM - INFO - Server is running on port: 3030 
+5/8/2023, 12:52:29 PM - ERROR - cannot find chats | ReferenceError: _id is not defined 
+5/8/2023, 12:52:29 PM - ERROR - Failed to get chats | ReferenceError: _id is not defined 
+5/8/2023, 12:53:15 PM - INFO - Server is running on port: 3030 
+5/8/2023, 12:53:22 PM - ERROR - cannot find chats | MongoError: $where not allowed in this atlas tier 
+5/8/2023, 12:53:22 PM - ERROR - Failed to get chats | MongoError: $where not allowed in this atlas tier 
+5/8/2023, 12:53:58 PM - INFO - Server is running on port: 3030 
+5/8/2023, 12:54:02 PM - ERROR - cannot find chats | MongoError: $where not allowed in this atlas tier 
+5/8/2023, 12:54:02 PM - ERROR - Failed to get chats | MongoError: $where not allowed in this atlas tier 
+5/8/2023, 1:14:34 PM - INFO - Server is running on port: 3030 
+5/8/2023, 1:15:17 PM - INFO - New chat msg from socket [id: 7EA-6yuT_NTcZuzRAAAH], emitting to topic undefined 
+5/8/2023, 2:07:14 PM - INFO - Server is running on port: 3030 
+5/8/2023, 2:07:55 PM - INFO - New chat msg from socket [id: JMAaW5i8tO6RoawDAAAB], emitting to topic undefined 

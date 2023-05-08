@@ -11,12 +11,12 @@ module.exports = {
 }
 
 
-async function query() {
+async function query(userId) {
     try {
+        console.log(userId);
         const collection = await dbService.getCollection('chat')
-        var chats = await collection.find().toArray()
+        var chats = await collection.find({ "members._id" : userId }).toArray()
         chats = chats.map(chat => {
-            delete chat.password
             chat.createdAt = ObjectId(chat._id).getTimestamp()
             // Returning fake fresh data
             // chat.createdAt = Date.now() - (1000 * 60 * 60 * 24 * 3) // 3 days ago

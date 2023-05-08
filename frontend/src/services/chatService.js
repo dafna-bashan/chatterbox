@@ -12,9 +12,9 @@ export const chatService = {
 window.chatService = chatService;
 
 
-function query() {
+function query(userId) {
     // return storageService.query('chat')
-    return httpService.get(`chat`);
+    return httpService.get(`chat/all/${userId}`);
 }
 
 function getById(chatId) {

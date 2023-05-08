@@ -14,7 +14,7 @@ async function getChat(req, res) {
 
 async function getChats(req, res) {
     try {
-        const chats = await chatService.query()
+        const chats = await chatService.query(req.params.id)
         res.send(chats)
     } catch (err) {
         logger.error('Failed to get chats', err)

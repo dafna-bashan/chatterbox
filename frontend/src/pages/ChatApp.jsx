@@ -24,7 +24,7 @@ export function ChatApp() {
     // const [msgs, setMsgs] = useState(currChat.msgs)
 
     useEffect(() => {
-        dispatch(loadChats())
+        dispatch(loadChats(loggedInUser._id))
         loadDefaultChat()
         dispatch(loadUsers())
     }, [])
@@ -40,12 +40,17 @@ export function ChatApp() {
 
     useEffect(() => {
         if (!loggedInUser) navigate('/login')
-        socketService.on(SOCKET_EVENT_ADD_MSG, onLoadChat)
+        socketService.on(SOCKET_EVENT_ADD_MSG, onLoadChats)
         return () => {
-            socketService.off(SOCKET_EVENT_ADD_MSG, onLoadChat)
+            socketService.off(SOCKET_EVENT_ADD_MSG, onLoadChats)
 
         }
     }, [loggedInUser, navigate])
+
+    function onLoadChats(chatId) {
+        dispatch(loadChat(chatId))
+        dispatch(loadChats(loggedInUser._id))
+    }
 
     function handleChange(ev) {
         const { name, value } = ev.target
@@ -97,13 +102,13 @@ export function ChatApp() {
         dispatch(addChat({ members }))
     }
 
-    function onLoadChat(chatId){
+    function onLoadChat(chatId) {
         dispatch(loadChat(chatId))
     }
 
     return (
         <div className="chat-app flex">
-            <ChatSideBar chats={chats} users={users} loggedInUser={loggedInUser} onAddChat={onAddChat} onLoadChat={onLoadChat}/>
+            <ChatSideBar chats={chats} users={users} loggedInUser={loggedInUser} onAddChat={onAddChat} onLoadChat={onLoadChat} />
             <div className="chat-container flex column full">
                 {currChat.msgs.length && <MsgList msgs={currChat.msgs} />}
                 <AddMsg msg={msg} handleChange={handleChange} sendMsg={sendMsg} />

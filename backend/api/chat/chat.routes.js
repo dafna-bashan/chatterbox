@@ -6,7 +6,7 @@ const router = express.Router()
 // middleware that is specific to this router
 // router.use(requireAuth)
 
-router.get('/', getChats)
+router.get('/all/:id', getChats)
 router.get('/:id', getChat)
 router.post('/', addChat)
 router.put('/:id',  updateChat)

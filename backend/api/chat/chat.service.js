@@ -13,7 +13,7 @@ module.exports = {
 
 async function query(userId) {
     try {
-        console.log(userId);
+        // console.log(userId);
         const collection = await dbService.getCollection('chat')
         var chats = await collection.find({ "members._id" : userId }).toArray()
         chats = chats.map(chat => {

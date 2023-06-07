@@ -5,4 +5,12 @@
         background-color: aliceblue;
         // overflow-y: scroll;
     }
+
+    .welcome{
+        display: flex;
+        height: 100%;
+        font-size: xx-large;
+        align-items: center;
+        justify-content: center;
+    }
 }

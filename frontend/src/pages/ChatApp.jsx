@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { socketService, SOCKET_EMIT_SEND_MSG, SOCKET_EVENT_ADD_MSG } from '../services/socket.service'
+import { socketService, SOCKET_EMIT_SEND_MSG, SOCKET_EVENT_ADD_MSG, SOCKET_EMIT_SET_CHAT_ID } from '../services/socket.service'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { ChatSideBar } from '../cmps/ChatSideBar'
@@ -25,7 +25,7 @@ export function ChatApp() {
 
     useEffect(() => {
         dispatch(loadChats(loggedInUser._id))
-        loadDefaultChat()
+        // loadDefaultChat()
         dispatch(loadUsers())
     }, [])
 
@@ -33,19 +33,20 @@ export function ChatApp() {
     //     if (currChat.msgs.length) setMsgs(currChat.msgs)
     // }, [currChat])
 
-    function loadDefaultChat() {
-        dispatch(loadChat('64521771d24e76ba01009bc3'))
-    }
+    // function loadDefaultChat() {
+    //     dispatch(loadChat('64521771d24e76ba01009bc3'))
+    // }
 
 
     useEffect(() => {
         if (!loggedInUser) navigate('/login')
         socketService.on(SOCKET_EVENT_ADD_MSG, onLoadChats)
+        socketService.emit(SOCKET_EMIT_SET_CHAT_ID, currChat._id)
         return () => {
             socketService.off(SOCKET_EVENT_ADD_MSG, onLoadChats)
 
         }
-    }, [loggedInUser, navigate])
+    }, [loggedInUser, navigate, currChat._id])
 
     function onLoadChats(chatId) {
         dispatch(loadChat(chatId))
@@ -110,8 +111,12 @@ export function ChatApp() {
         <div className="chat-app flex">
             <ChatSideBar chats={chats} users={users} loggedInUser={loggedInUser} onAddChat={onAddChat} onLoadChat={onLoadChat} />
             <div className="chat-container flex column full">
-                {currChat.msgs.length && <MsgList msgs={currChat.msgs} />}
-                <AddMsg msg={msg} handleChange={handleChange} sendMsg={sendMsg} />
+                {currChat.msgs.length ?
+                    <React.Fragment>
+                        <MsgList msgs={currChat.msgs} />
+                        <AddMsg msg={msg} handleChange={handleChange} sendMsg={sendMsg} />
+                    </React.Fragment> : <div className="welcome">Chatterbox</div>
+                }
             </div>
         </div>
     )

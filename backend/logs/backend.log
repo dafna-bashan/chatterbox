@@ -192,3 +192,264 @@
 5/8/2023, 1:15:17 PM - INFO - New chat msg from socket [id: 7EA-6yuT_NTcZuzRAAAH], emitting to topic undefined 
 5/8/2023, 2:07:14 PM - INFO - Server is running on port: 3030 
 5/8/2023, 2:07:55 PM - INFO - New chat msg from socket [id: JMAaW5i8tO6RoawDAAAB], emitting to topic undefined 
+5/8/2023, 2:13:52 PM - INFO - Server is running on port: 3030 
+5/8/2023, 2:13:57 PM - INFO - New chat msg from socket [id: mMF8FFEbF7km2ri6AAAB], emitting to topic undefined 
+5/8/2023, 2:15:28 PM - INFO - Server is running on port: 3030 
+5/8/2023, 2:16:05 PM - INFO - Server is running on port: 3030 
+5/8/2023, 2:17:20 PM - INFO - Server is running on port: 3030 
+5/8/2023, 2:17:32 PM - INFO - Server is running on port: 3030 
+5/8/2023, 2:17:38 PM - INFO - Server is running on port: 3030 
+5/8/2023, 2:17:40 PM - INFO - New connected socket [id: qsXpJ5LLCV6d6cONAAAC] 
+5/8/2023, 2:17:40 PM - INFO - New connected socket [id: X3v9QMW52lp9aqjwAAAD] 
+5/8/2023, 2:18:03 PM - INFO - Server is running on port: 3030 
+5/8/2023, 2:18:03 PM - INFO - New connected socket [id: PkceNf0MkCxFy_CZAAAB] 
+5/8/2023, 2:18:05 PM - INFO - New connected socket [id: JI6BdN1v-g1oU0cOAAAD] 
+5/8/2023, 2:18:08 PM - INFO - Server is running on port: 3030 
+5/8/2023, 2:18:09 PM - INFO - New connected socket [id: CahmIrNYsyzg5U7gAAAC] 
+5/8/2023, 2:18:09 PM - INFO - New connected socket [id: GDd7R_Lrv7NySL3pAAAD] 
+5/8/2023, 2:24:31 PM - INFO - New connected socket [id: O4PiD6pvLZPpBNl3AAAF] 
+5/8/2023, 2:24:45 PM - DEBUG - auth.service - login with email: monica@gmail.com 
+5/8/2023, 2:24:48 PM - INFO - User login:  | {"_id":"6453755175e6dbd625ef61d7","email":"monica@gmail.com","firstName":"Monica","lastName":"Geller","bio":"","phone":"","imgUrl":"https://res.cloudinary.com/depjjubya/image/upload/v1683191129/monica_j5egfg.png"} 
+5/8/2023, 2:25:16 PM - INFO - New chat msg from socket [id: O4PiD6pvLZPpBNl3AAAF], emitting to chatId undefined 
+5/8/2023, 2:25:53 PM - INFO - New chat msg from socket [id: O4PiD6pvLZPpBNl3AAAF], emitting to chatId undefined 
+5/8/2023, 2:26:08 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 2:26:08 PM - INFO - New connected socket [id: JKmyeSxES9RbdpFCAAAH] 
+5/8/2023, 2:26:14 PM - INFO - New chat msg from socket [id: JKmyeSxES9RbdpFCAAAH], emitting to chatId undefined 
+5/8/2023, 2:26:19 PM - INFO - New chat msg from socket [id: JKmyeSxES9RbdpFCAAAH], emitting to chatId undefined 
+5/8/2023, 2:26:27 PM - INFO - New chat msg from socket [id: O4PiD6pvLZPpBNl3AAAF], emitting to chatId undefined 
+5/8/2023, 2:32:16 PM - INFO - New chat msg from socket [id: GDd7R_Lrv7NySL3pAAAD], emitting to chatId undefined 
+5/8/2023, 2:32:50 PM - INFO - New chat msg from socket [id: JKmyeSxES9RbdpFCAAAH], emitting to chatId undefined 
+5/8/2023, 2:58:53 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 2:58:53 PM - INFO - New connected socket [id: 72aPbFri0VZDLPIyAAAJ] 
+5/8/2023, 2:58:54 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 2:58:55 PM - INFO - New connected socket [id: jdE69swOJvhw7V11AAAL] 
+5/8/2023, 2:59:09 PM - INFO - New chat msg from socket [id: jdE69swOJvhw7V11AAAL], emitting to chatId undefined 
+5/8/2023, 2:59:19 PM - INFO - New chat msg from socket [id: 72aPbFri0VZDLPIyAAAJ], emitting to chatId undefined 
+5/8/2023, 2:59:35 PM - INFO - New chat msg from socket [id: jdE69swOJvhw7V11AAAL], emitting to chatId undefined 
+5/8/2023, 2:59:41 PM - INFO - New chat msg from socket [id: jdE69swOJvhw7V11AAAL], emitting to chatId undefined 
+5/8/2023, 2:59:45 PM - INFO - New chat msg from socket [id: jdE69swOJvhw7V11AAAL], emitting to chatId undefined 
+5/8/2023, 2:59:59 PM - INFO - New chat msg from socket [id: 72aPbFri0VZDLPIyAAAJ], emitting to chatId undefined 
+5/8/2023, 3:00:22 PM - INFO - New chat msg from socket [id: GDd7R_Lrv7NySL3pAAAD], emitting to chatId undefined 
+5/8/2023, 3:00:37 PM - INFO - New chat msg from socket [id: GDd7R_Lrv7NySL3pAAAD], emitting to chatId undefined 
+5/8/2023, 3:02:50 PM - INFO - New connected socket [id: WgJSV4GX5VUQYFKjAAAP] 
+5/8/2023, 3:02:50 PM - INFO - New connected socket [id: sRvT0a_RX0vFjXIzAAAQ] 
+5/8/2023, 3:02:50 PM - INFO - New connected socket [id: -mRlWVWqXmKno7EJAAAR] 
+5/8/2023, 3:02:59 PM - INFO - New connected socket [id: CS0dDjwtB59MEY_NAAAV] 
+5/8/2023, 3:02:59 PM - INFO - New connected socket [id: ugRJvdBfxGyW4b4uAAAW] 
+5/8/2023, 3:02:59 PM - INFO - New connected socket [id: FsUoDY5Q5V2yoeGQAAAX] 
+5/8/2023, 3:04:16 PM - INFO - New connected socket [id: HXR6j5m2-XxmaGw8AAAb] 
+5/8/2023, 3:04:16 PM - INFO - New connected socket [id: _yrgvjmUc_U2dxElAAAc] 
+5/8/2023, 3:04:16 PM - INFO - New connected socket [id: -03DBqvDMzYFSDQSAAAd] 
+5/8/2023, 3:04:16 PM - INFO - New connected socket [id: CPoKGQxaecF1pkQwAAAh] 
+5/8/2023, 3:04:16 PM - INFO - New connected socket [id: lWdxZlwupaPez4a8AAAi] 
+5/8/2023, 3:04:16 PM - INFO - New connected socket [id: Yh8wCJwHyUViDBEDAAAj] 
+5/8/2023, 3:04:48 PM - INFO - New connected socket [id: 7YrIsxG9Rg9SnuqlAAAn] 
+5/8/2023, 3:04:48 PM - INFO - New connected socket [id: CUDZafxi_c1gt9p2AAAo] 
+5/8/2023, 3:04:48 PM - INFO - New connected socket [id: 8S6OJqA36UioRV17AAAp] 
+5/8/2023, 3:04:48 PM - INFO - New connected socket [id: eEcPay1RrboXbAakAAAt] 
+5/8/2023, 3:04:48 PM - INFO - New connected socket [id: 2O2EvdHhCWJWsH-PAAAu] 
+5/8/2023, 3:04:48 PM - INFO - New connected socket [id: MQ8h0wDcwuWZFtm9AAAv] 
+5/8/2023, 3:07:43 PM - INFO - Server is running on port: 3030 
+5/8/2023, 3:07:44 PM - INFO - New connected socket [id: VjY0ZJ5lKIwFDQSlAAAH] 
+5/8/2023, 3:07:44 PM - INFO - New connected socket [id: CCWc8BTi_gypQFGcAAAI] 
+5/8/2023, 3:07:44 PM - INFO - New connected socket [id: -YQLhFg4DlVHpLJ-AAAJ] 
+5/8/2023, 3:07:44 PM - INFO - New connected socket [id: idd4DPgZPaa3-OslAAAK] 
+5/8/2023, 3:07:44 PM - INFO - New connected socket [id: HUwx-VTACurxKaosAAAL] 
+5/8/2023, 3:07:44 PM - INFO - New connected socket [id: L9ZtigWwzDXNBnKGAAAM] 
+5/8/2023, 3:07:44 PM - INFO - New connected socket [id: 3JMjQaNwWxNQNJxfAAAN] 
+5/8/2023, 3:07:45 PM - INFO - New connected socket [id: OzDV39SixLoUEqueAAAV] 
+5/8/2023, 3:07:45 PM - INFO - New connected socket [id: i68z5UTiovREZwN6AAAW] 
+5/8/2023, 3:07:45 PM - INFO - New connected socket [id: BiRB2nAj6ZZY7863AAAX] 
+5/8/2023, 3:07:45 PM - INFO - New connected socket [id: qEqImkVScxIw1FerAAAY] 
+5/8/2023, 3:07:45 PM - INFO - New connected socket [id: Fd1BDXjskobGzFjJAAAZ] 
+5/8/2023, 3:07:45 PM - INFO - New connected socket [id: Fy2EV0xIpteiprt5AAAa] 
+5/8/2023, 3:07:45 PM - INFO - New connected socket [id: kXLt6yd0XTnUHR4yAAAb] 
+5/8/2023, 3:07:45 PM - INFO - New connected socket [id: yDZBkSQKLmep8_NyAAAj] 
+5/8/2023, 3:07:45 PM - INFO - New connected socket [id: RdHEIXuE7E3wXj48AAAk] 
+5/8/2023, 3:07:45 PM - INFO - New connected socket [id: lb21VsHw0_AoO7IJAAAl] 
+5/8/2023, 3:07:45 PM - INFO - New connected socket [id: 4JM_NpYaoZZJfdPhAAAm] 
+5/8/2023, 3:07:45 PM - INFO - New connected socket [id: hcIBS28njxuELRXlAAAn] 
+5/8/2023, 3:07:45 PM - INFO - New connected socket [id: a3MT4LRFc2eceQL6AAAo] 
+5/8/2023, 3:07:45 PM - INFO - New connected socket [id: 9UHgU_GWs8V1bFPOAAAp] 
+5/8/2023, 3:07:57 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:07:57 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:07:57 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:07:57 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:07:57 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:07:57 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:07:57 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:07:57 PM - INFO - New connected socket [id: ZEuzJ9rZqQveclcDAAAr] 
+5/8/2023, 3:08:01 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:08:01 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:08:01 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:08:01 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:08:01 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:08:01 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:08:01 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:08:01 PM - INFO - New connected socket [id: KIwG-0FjnDApetuwAAAt] 
+5/8/2023, 3:08:02 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:08:02 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:08:02 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:08:02 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:08:02 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:08:02 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:08:02 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:08:02 PM - INFO - New connected socket [id: -prbnZgPyeSybuwhAAAv] 
+5/8/2023, 3:08:32 PM - INFO - New chat msg from socket [id: -prbnZgPyeSybuwhAAAv], emitting to chatId 6458cbae37455608f77e147f 
+5/8/2023, 3:08:41 PM - INFO - New chat msg from socket [id: KIwG-0FjnDApetuwAAAt], emitting to chatId 6458cbae37455608f77e147f 
+5/8/2023, 3:10:24 PM - INFO - New chat msg from socket [id: ZEuzJ9rZqQveclcDAAAr], emitting to chatId 6458dc191ca9bb0ae2e2279a 
+5/8/2023, 3:10:31 PM - INFO - Socket is leaving chatId 6458cbae37455608f77e147f [id: KIwG-0FjnDApetuwAAAt] 
+5/8/2023, 3:10:42 PM - INFO - New chat msg from socket [id: ZEuzJ9rZqQveclcDAAAr], emitting to chatId 6458dc191ca9bb0ae2e2279a 
+5/8/2023, 3:11:07 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:11:08 PM - INFO - New connected socket [id: eOowfNVqOLyy1evPAAAx] 
+5/8/2023, 3:11:19 PM - INFO - New chat msg from socket [id: eOowfNVqOLyy1evPAAAx], emitting to chatId 6458dc191ca9bb0ae2e2279a 
+5/8/2023, 3:11:30 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:11:31 PM - INFO - New connected socket [id: ounGYNG3KYHD87wDAAAz] 
+5/8/2023, 3:11:33 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:11:33 PM - INFO - New connected socket [id: Z5yLkTcXEcsWizAiAAA1] 
+5/8/2023, 3:11:34 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:11:34 PM - INFO - New connected socket [id: YcdBc0RbbK1Y0S26AAA3] 
+5/8/2023, 3:11:43 PM - INFO - New chat msg from socket [id: Z5yLkTcXEcsWizAiAAA1], emitting to chatId 6458dc191ca9bb0ae2e2279a 
+5/8/2023, 3:11:58 PM - INFO - Socket is leaving chatId 6458dc191ca9bb0ae2e2279a [id: Z5yLkTcXEcsWizAiAAA1] 
+5/8/2023, 3:12:05 PM - INFO - New chat msg from socket [id: YcdBc0RbbK1Y0S26AAA3], emitting to chatId 6458cbae37455608f77e147f 
+5/8/2023, 3:12:13 PM - INFO - New chat msg from socket [id: YcdBc0RbbK1Y0S26AAA3], emitting to chatId 6458cbae37455608f77e147f 
+5/8/2023, 3:12:16 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:12:16 PM - INFO - New connected socket [id: JcqgIv8raPP6Y0f4AAA5] 
+5/8/2023, 3:12:18 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:12:19 PM - INFO - New connected socket [id: sXO4ijIG_8OrvujSAAA7] 
+5/8/2023, 3:12:30 PM - INFO - New chat msg from socket [id: sXO4ijIG_8OrvujSAAA7], emitting to chatId 6458cbae37455608f77e147f 
+5/8/2023, 3:12:35 PM - INFO - New chat msg from socket [id: JcqgIv8raPP6Y0f4AAA5], emitting to chatId 6458cbae37455608f77e147f 
+5/8/2023, 3:13:17 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:13:17 PM - INFO - New connected socket [id: irkZEbJhYdqxk3huAAA9] 
+5/8/2023, 3:13:39 PM - INFO - Socket is leaving chatId 6458dc191ca9bb0ae2e2279a [id: irkZEbJhYdqxk3huAAA9] 
+5/8/2023, 3:14:37 PM - INFO - Server is running on port: 3030 
+5/8/2023, 3:14:38 PM - INFO - New connected socket [id: 54mRdsW8ziJTJEkgAAAB] 
+5/8/2023, 3:14:38 PM - INFO - New connected socket [id: 4nVUCeuIL0uM8jOuAAAE] 
+5/8/2023, 3:14:38 PM - INFO - New connected socket [id: Bi_B-8x2DOPt_8ycAAAF] 
+5/8/2023, 3:14:49 PM - INFO - Socket is joining chatId 6458dc191ca9bb0ae2e2279a [id: 54mRdsW8ziJTJEkgAAAB] 
+5/8/2023, 3:15:22 PM - INFO - Socket is leaving chatId 6458dc191ca9bb0ae2e2279a [id: 54mRdsW8ziJTJEkgAAAB] 
+5/8/2023, 3:15:22 PM - INFO - Socket is joining chatId 6458aacf311be90292105122 [id: 54mRdsW8ziJTJEkgAAAB] 
+5/8/2023, 3:16:07 PM - INFO - Server is running on port: 3030 
+5/8/2023, 3:16:09 PM - INFO - New connected socket [id: jupuxWDvVnf-YXt1AAAB] 
+5/8/2023, 3:16:09 PM - INFO - New connected socket [id: _SEWtx-JlZ9KsEbxAAAD] 
+5/8/2023, 3:16:10 PM - INFO - New connected socket [id: TVBQw5kDosxiMz3jAAAF] 
+5/8/2023, 3:17:03 PM - INFO - New chat msg from socket [id: _SEWtx-JlZ9KsEbxAAAD], emitting to chatId undefined 
+5/8/2023, 3:17:26 PM - INFO - Socket is joining chatId 6458dc191ca9bb0ae2e2279a [id: _SEWtx-JlZ9KsEbxAAAD] 
+5/8/2023, 3:17:32 PM - INFO - New chat msg from socket [id: _SEWtx-JlZ9KsEbxAAAD], emitting to chatId 6458dc191ca9bb0ae2e2279a 
+5/8/2023, 3:17:52 PM - INFO - Socket is joining chatId 6458dc191ca9bb0ae2e2279a [id: jupuxWDvVnf-YXt1AAAB] 
+5/8/2023, 3:20:32 PM - INFO - Server is running on port: 3030 
+5/8/2023, 3:20:33 PM - INFO - New connected socket [id: 1Likm8U3ngqr4LhwAAAB] 
+5/8/2023, 3:20:34 PM - INFO - New connected socket [id: Ix2QnKeVSLSclZzcAAAD] 
+5/8/2023, 3:20:35 PM - INFO - New connected socket [id: xekzHEdJczhIq3YlAAAF] 
+5/8/2023, 3:20:43 PM - INFO - New chat msg from socket [id: 1Likm8U3ngqr4LhwAAAB], emitting to chatId undefined 
+5/8/2023, 3:20:45 PM - INFO - Socket is joining chatId 6458dc191ca9bb0ae2e2279a [id: xekzHEdJczhIq3YlAAAF] 
+5/8/2023, 3:20:57 PM - INFO - New chat msg from socket [id: xekzHEdJczhIq3YlAAAF], emitting to chatId 6458dc191ca9bb0ae2e2279a 
+5/8/2023, 3:21:30 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:21:30 PM - INFO - New connected socket [id: kC1a9pDPX0nuDOYTAAAH] 
+5/8/2023, 3:21:30 PM - INFO - Socket is joining chatId  [id: kC1a9pDPX0nuDOYTAAAH] 
+5/8/2023, 3:21:33 PM - INFO - Socket is joining chatId 6458dc191ca9bb0ae2e2279a [id: kC1a9pDPX0nuDOYTAAAH] 
+5/8/2023, 3:22:42 PM - INFO - Server is running on port: 3030 
+5/8/2023, 3:22:43 PM - INFO - New connected socket [id: SbOlmIMEjkUagQwFAAAC] 
+5/8/2023, 3:22:43 PM - INFO - New connected socket [id: OqEYlqipou6YCROeAAAD] 
+5/8/2023, 3:22:43 PM - INFO - New connected socket [id: d4WfzoyCMYjQG407AAAF] 
+5/8/2023, 3:25:44 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:25:44 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:25:44 PM - INFO - Socket disconnected [id: undefined] 
+5/8/2023, 3:25:45 PM - INFO - New connected socket [id: pgCkU2t9gml9-ji0AAAH] 
+5/8/2023, 3:25:46 PM - INFO - New connected socket [id: j7ojSni-HssDyzafAAAJ] 
+5/8/2023, 3:25:46 PM - INFO - New connected socket [id: aHuxYIJnw8rUa0IqAAAL] 
+5/10/2023, 8:15:04 AM - INFO - Socket disconnected [id: undefined] 
+5/10/2023, 8:15:04 AM - INFO - Socket disconnected [id: undefined] 
+5/10/2023, 8:15:04 AM - INFO - Socket disconnected [id: undefined] 
+5/10/2023, 8:15:06 AM - INFO - New connected socket [id: oV5ASOkCNdK4Qg7wAAAO] 
+5/10/2023, 8:15:06 AM - INFO - New connected socket [id: yiUfDd-gsLEcunBIAAAP] 
+5/10/2023, 8:15:07 AM - INFO - New connected socket [id: O3U7JVd5mGlcZU4pAAAR] 
+5/10/2023, 4:35:46 PM - INFO - Socket disconnected [id: undefined] 
+5/10/2023, 4:35:46 PM - INFO - Socket disconnected [id: undefined] 
+5/10/2023, 4:35:46 PM - INFO - Socket disconnected [id: undefined] 
+5/10/2023, 4:35:47 PM - INFO - New connected socket [id: d78d_5Ty3RymxJ79AAAU] 
+5/10/2023, 4:35:47 PM - INFO - New connected socket [id: DCUsIkgRd99fyzUbAAAV] 
+5/10/2023, 4:35:48 PM - INFO - New connected socket [id: YdQu4tsWZ4ngUvzxAAAX] 
+5/10/2023, 10:10:42 PM - INFO - Socket disconnected [id: undefined] 
+5/10/2023, 10:10:42 PM - INFO - Socket disconnected [id: undefined] 
+5/10/2023, 10:10:42 PM - INFO - Socket disconnected [id: undefined] 
+5/10/2023, 10:10:43 PM - INFO - New connected socket [id: iZiUD8KQlwsy88ujAAAa] 
+5/10/2023, 10:10:43 PM - INFO - New connected socket [id: 5qcS6Gy_jncPywktAAAb] 
+5/10/2023, 10:10:44 PM - INFO - New connected socket [id: n2ZIKKBKadcX6V3uAAAd] 
+5/11/2023, 3:53:53 PM - INFO - Socket is joining chatId 6458dc191ca9bb0ae2e2279a [id: iZiUD8KQlwsy88ujAAAa] 
+5/11/2023, 3:54:09 PM - INFO - New chat msg from socket [id: 5qcS6Gy_jncPywktAAAb], emitting to chatId undefined 
+5/11/2023, 3:54:18 PM - INFO - New chat msg from socket [id: iZiUD8KQlwsy88ujAAAa], emitting to chatId 6458dc191ca9bb0ae2e2279a 
+5/11/2023, 3:54:35 PM - INFO - Socket disconnected [id: undefined] 
+5/11/2023, 3:54:36 PM - INFO - Socket disconnected [id: undefined] 
+5/11/2023, 3:59:25 PM - INFO - Server is running on port: 3030 
+5/11/2023, 3:59:27 PM - INFO - New connected socket [id: Tq0UBvDPu1kDHXUxAAAB] 
+5/11/2023, 3:59:44 PM - INFO - Server is running on port: 3030 
+5/11/2023, 3:59:46 PM - INFO - New connected socket [id: QFS7jc2i3hvmU-vRAAAB] 
+5/11/2023, 4:00:44 PM - INFO - Socket disconnected [id: undefined] 
+5/11/2023, 4:00:47 PM - INFO - New connected socket [id: ubBVz967hSKugXYsAAAD] 
+5/12/2023, 8:30:02 AM - INFO - Socket disconnected [id: undefined] 
+5/12/2023, 8:30:03 AM - INFO - New connected socket [id: n6M7-O4CDbaLpOfvAAAF] 
+5/14/2023, 3:56:38 PM - INFO - Socket disconnected [id: undefined] 
+5/14/2023, 3:56:39 PM - INFO - New connected socket [id: VaoJ0bnIynk1IZF8AAAH] 
+5/15/2023, 2:31:32 PM - INFO - Socket disconnected [id: undefined] 
+5/15/2023, 2:31:33 PM - INFO - New connected socket [id: XGeOocPnT1PgM34cAAAJ] 
+5/15/2023, 2:32:18 PM - INFO - Socket disconnected [id: undefined] 
+5/15/2023, 2:32:20 PM - INFO - New connected socket [id: J5rD-T55jEVx9bmPAAAL] 
+5/16/2023, 11:46:17 AM - INFO - Socket disconnected [id: undefined] 
+6/7/2023, 9:09:26 AM - INFO - Server is running on port: 3030 
+6/7/2023, 9:09:45 AM - INFO - New connected socket [id: r5Eta9RDkada1T_RAAAB] 
+6/7/2023, 9:10:02 AM - DEBUG - auth.service - login with email: rachel@gmail.com 
+6/7/2023, 9:10:03 AM - INFO - User login:  | {"_id":"6453731775e6dbd625ef61d5","email":"rachel@gmail.com","firstName":"Rachel","lastName":"Green","bio":"","phone":"","imgUrl":"https://res.cloudinary.com/depjjubya/image/upload/v1683191002/rachel_c4swwf.png"} 
+6/7/2023, 9:10:11 AM - INFO - Socket is joining chatId  [id: r5Eta9RDkada1T_RAAAB] 
+6/7/2023, 9:10:27 AM - INFO - Socket is joining chatId 6458a53e311be90292105120 [id: r5Eta9RDkada1T_RAAAB] 
+6/7/2023, 9:10:29 AM - INFO - Socket is leaving chatId 6458a53e311be90292105120 [id: r5Eta9RDkada1T_RAAAB] 
+6/7/2023, 9:10:29 AM - INFO - Socket is joining chatId 6458a59f311be90292105121 [id: r5Eta9RDkada1T_RAAAB] 
+6/7/2023, 9:10:29 AM - INFO - Socket is leaving chatId 6458a59f311be90292105121 [id: r5Eta9RDkada1T_RAAAB] 
+6/7/2023, 9:10:29 AM - INFO - Socket is joining chatId 6458aacf311be90292105122 [id: r5Eta9RDkada1T_RAAAB] 
+6/7/2023, 9:10:32 AM - INFO - Socket is leaving chatId 6458aacf311be90292105122 [id: r5Eta9RDkada1T_RAAAB] 
+6/7/2023, 9:10:32 AM - INFO - Socket is joining chatId 6458dc191ca9bb0ae2e2279a [id: r5Eta9RDkada1T_RAAAB] 
+6/7/2023, 9:11:11 AM - INFO - New connected socket [id: vhspjvRglmgGuPbmAAAD] 
+6/7/2023, 9:11:48 AM - DEBUG - auth.service - login with email: monica@gmail.com 
+6/7/2023, 9:11:49 AM - INFO - User login:  | {"_id":"6453755175e6dbd625ef61d7","email":"monica@gmail.com","firstName":"Monica","lastName":"Geller","bio":"","phone":"","imgUrl":"https://res.cloudinary.com/depjjubya/image/upload/v1683191129/monica_j5egfg.png"} 
+6/7/2023, 9:11:52 AM - INFO - Socket is joining chatId  [id: vhspjvRglmgGuPbmAAAD] 
+6/7/2023, 9:11:59 AM - INFO - Socket is joining chatId 6458dc191ca9bb0ae2e2279a [id: vhspjvRglmgGuPbmAAAD] 
+6/7/2023, 9:22:25 AM - INFO - New chat msg from socket [id: r5Eta9RDkada1T_RAAAB], emitting to chatId 6458dc191ca9bb0ae2e2279a 
+6/7/2023, 9:22:31 AM - INFO - New chat msg from socket [id: vhspjvRglmgGuPbmAAAD], emitting to chatId 6458dc191ca9bb0ae2e2279a 
+6/7/2023, 9:22:43 AM - INFO - New chat msg from socket [id: vhspjvRglmgGuPbmAAAD], emitting to chatId 6458dc191ca9bb0ae2e2279a 
+6/7/2023, 9:22:53 AM - INFO - New chat msg from socket [id: vhspjvRglmgGuPbmAAAD], emitting to chatId 6458dc191ca9bb0ae2e2279a 
+6/7/2023, 9:23:01 AM - INFO - New chat msg from socket [id: r5Eta9RDkada1T_RAAAB], emitting to chatId 6458dc191ca9bb0ae2e2279a 
+6/7/2023, 9:23:06 AM - INFO - New chat msg from socket [id: r5Eta9RDkada1T_RAAAB], emitting to chatId 6458dc191ca9bb0ae2e2279a 
+6/7/2023, 9:30:06 AM - INFO - Socket disconnected [id: undefined] 
+6/7/2023, 9:30:07 AM - INFO - New connected socket [id: FYsBZyaGiT-AxmA9AAAF] 
+6/7/2023, 9:30:07 AM - INFO - Socket is joining chatId  [id: FYsBZyaGiT-AxmA9AAAF] 
+6/7/2023, 9:37:07 AM - INFO - Socket disconnected [id: undefined] 
+6/7/2023, 9:37:07 AM - INFO - New connected socket [id: GW0fre1H-PLnaXtbAAAH] 
+6/7/2023, 9:37:38 AM - INFO - Socket disconnected [id: undefined] 
+6/7/2023, 9:37:39 AM - INFO - New connected socket [id: EVylOHVrRe4ezwrVAAAJ] 
+6/7/2023, 9:37:49 AM - INFO - Socket disconnected [id: undefined] 
+6/7/2023, 9:37:49 AM - INFO - New connected socket [id: nUUGR0HzXIgr7mnkAAAL] 
+6/7/2023, 9:38:50 AM - INFO - Socket disconnected [id: undefined] 
+6/7/2023, 9:38:50 AM - INFO - New connected socket [id: x6daw5uDpTMOAUoFAAAN] 
+6/7/2023, 9:39:50 AM - INFO - Socket disconnected [id: undefined] 
+6/7/2023, 9:39:50 AM - INFO - New connected socket [id: GKdYixBhOLghIppEAAAP] 
+6/7/2023, 9:41:18 AM - INFO - Socket disconnected [id: undefined] 
+6/7/2023, 9:41:18 AM - INFO - New connected socket [id: W9lQMiWb86PtfDXTAAAR] 
+6/7/2023, 9:41:40 AM - INFO - Socket disconnected [id: undefined] 
+6/7/2023, 9:41:40 AM - INFO - New connected socket [id: ui-egAERHMmw1BXcAAAT] 
+6/7/2023, 9:42:05 AM - INFO - Socket disconnected [id: undefined] 
+6/7/2023, 9:42:29 AM - INFO - Socket disconnected [id: undefined] 
+6/7/2023, 9:48:53 AM - INFO - Server is running on port: 3030 
+6/7/2023, 9:49:13 AM - INFO - New connected socket [id: bn06LfkI5s4Qfol-AAAB] 
+6/7/2023, 9:49:56 AM - INFO - Socket disconnected [id: undefined] 
+6/7/2023, 9:49:57 AM - INFO - New connected socket [id: mr3nVnpm7U-jZRaeAAAD] 
+6/7/2023, 9:52:31 AM - INFO - Socket disconnected [id: undefined] 
+6/7/2023, 9:52:31 AM - INFO - New connected socket [id: uuvSLnLHqpVwzCmUAAAF] 
+6/7/2023, 9:53:12 AM - INFO - Socket disconnected [id: undefined] 
+6/7/2023, 9:53:13 AM - INFO - New connected socket [id: C8-q7WStEs3yI-UVAAAH] 
+6/7/2023, 9:55:36 AM - INFO - Socket disconnected [id: undefined] 
+6/7/2023, 10:06:37 AM - INFO - Server is running on port: 3030 
+6/7/2023, 10:07:02 AM - INFO - New connected socket [id: 2nBhAg_47d3mDU1mAAAB] 
+6/7/2023, 10:14:27 AM - DEBUG - auth.service - login with email: rachel@gmail.com 
+6/7/2023, 10:14:29 AM - INFO - User login:  | {"_id":"6453731775e6dbd625ef61d5","email":"rachel@gmail.com","firstName":"Rachel","lastName":"Green","bio":"","phone":"","imgUrl":"https://res.cloudinary.com/depjjubya/image/upload/v1683191002/rachel_c4swwf.png"} 
+6/7/2023, 10:14:31 AM - INFO - Socket is joining chatId  [id: 2nBhAg_47d3mDU1mAAAB] 
+6/7/2023, 10:16:08 AM - INFO - Socket is joining chatId 6458dc191ca9bb0ae2e2279a [id: 2nBhAg_47d3mDU1mAAAB] 

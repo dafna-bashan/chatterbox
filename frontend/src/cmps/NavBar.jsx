@@ -23,8 +23,9 @@ export function NavBar({ onLogout }) {
         <div>Chatterbox</div>
         {loggedInUser && <div>
           <ClickAwayListener onClickAway={() => setIsManuOpen(false)}>
-            <div className="user" onClick={toggleManu}><img src={loggedInUser.imgUrl ? loggedInUser.imgUrl : userImg} alt="" />
-              {/* <span className="username">{loggedInUser.firstName} {loggedInUser.lastName}</span> */}
+            <div className="user" onClick={toggleManu}>
+              <span className="username">{loggedInUser.firstName}</span>
+              <img src={loggedInUser.imgUrl ? loggedInUser.imgUrl : userImg} alt="" />
               {isManuOpen && <UserManu closeFunc={() => setIsManuOpen(false)} isChatOpen={isChatOpen} />}
             </div>
           </ClickAwayListener>

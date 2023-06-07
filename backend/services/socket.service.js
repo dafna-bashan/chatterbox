@@ -11,54 +11,48 @@ function setupSocketAPI(http) {
         }
     })
     gIo.on('connection', socket => {
-        // logger.info(`New connected socket [id: ${socket.id}]`)
-        console.log(`New connected socket [id: ${socket.id}]`);
+        logger.info(`New connected socket [id: ${socket.id}]`)
         socket.on('disconnect', socket => {
-            // logger.info(`Socket disconnected [id: ${socket.id}]`)
-            console.log(`Socket disconnected [id: ${socket.id}]`);
+            logger.info(`Socket disconnected [id: ${socket.id}]`)
 
         })
-        socket.on('chat-set-topic', topic => {
-            if (socket.myTopic === topic) return
-            if (socket.myTopic) {
-                socket.leave(socket.myTopic)
-                // logger.info(`Socket is leaving topic ${socket.myTopic} [id: ${socket.id}]`)
-                console.log(`Socket is leaving topic ${socket.myTopic} [id: ${socket.id}]`);
+        socket.on('chat-set-chatId', chatId => {
+            if (socket.myChatId === chatId) return
+            if (socket.myChatId) {
+                socket.leave(socket.myChatId)
+                logger.info(`Socket is leaving chatId ${socket.myChatId} [id: ${socket.id}]`)
 
             }
-            socket.join(topic)
-            socket.myTopic = topic
+            socket.join(chatId)
+            socket.myChatId = chatId
+            logger.info(`Socket is joining chatId ${socket.myChatId} [id: ${socket.id}]`)
+
         })
-        socket.on('chat-send-msg', msg => {
-            logger.info(`New chat msg from socket [id: ${socket.id}], emitting to topic ${socket.myTopic}`)
-            console.log(`New chat msg from socket [id: ${socket.id}], emitting to topic ${socket.myTopic}, ${msg.txt}`);
+        socket.on('chat-send-msg', chatId => {
+            logger.info(`New chat msg from socket [id: ${socket.id}], emitting to chatId ${socket.myChatId}`)
+            //TODO - EMIT ONLY TO SOCKETS IN THE SAME CHAT - check for bugs
 
             // emits to all sockets:
             // gIo.emit('chat-add-msg', msg)
             // emits to all sockets except the sender
-            socket.broadcast.emit('chat-add-msg', msg)
-            // emits only to sockets in the same room
-            // gIo.to(socket.myTopic).emit('chat-add-msg', msg)
-            // emits only to sockets in the same room except the sender
-            // socket.broadcast.to(socket.myTopic).emit('chat-add-msg', msg)
+            // socket.broadcast.emit('chat-add-msg', chatId)
+            // emits only to sockets in the same chat
+            gIo.to(socket.myChatId).emit('chat-add-msg', chatId)
+            // emits only to sockets in the same chat except the sender
+            // socket.broadcast.to(socket.myChatId).emit('chat-add-msg', chatId)
 
         })
         socket.on('user-watch', userId => {
-            // logger.info(`user-watch from socket [id: ${socket.id}], on user ${userId}`)
-            console.log(`user-watch from socket [id: ${socket.id}], on user ${userId}`);
-
+            logger.info(`user-watch from socket [id: ${socket.id}], on user ${userId}`)
             socket.join('watching:' + userId)
 
         })
         socket.on('set-user-socket', userId => {
-            // logger.info(`Setting socket.userId = ${userId} for socket [id: ${socket.id}]`)
-            console.log(`Setting socket.userId = ${userId} for socket [id: ${socket.id}]`);
-
+            logger.info(`Setting socket.userId = ${userId} for socket [id: ${socket.id}]`)
             socket.userId = userId
         })
         socket.on('unset-user-socket', () => {
-            // logger.info(`Removing socket.userId for socket [id: ${socket.id}]`)
-            console.log(`Removing socket.userId for socket [id: ${socket.id}]`);
+            logger.info(`Removing socket.userId for socket [id: ${socket.id}]`)
             delete socket.userId
         })
 

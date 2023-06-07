@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import ClickAwayListener from '@mui/base/ClickAwayListener';
 import { useDispatch, useSelector } from 'react-redux'
 import userImg from '../assets/img/user-img.png'
 import { UserManu } from './UserManu'
 import { ChatHeader } from './ChatHeader';
 import { logout } from '../store/actions/authActions';
-import { redirect, useNavigate } from 'react-router-dom';
 
 export function NavBar() {
 
   const [isManuOpen, setIsManuOpen] = useState(false)
   const loggedInUser = useSelector(state => state.userModule.loggedInUser)
+  const currChat = useSelector(state=> state.chatModule.currChat)
   const dispatch = useDispatch()
 
   const toggleManu = () => {
@@ -40,7 +40,7 @@ export function NavBar() {
           </ClickAwayListener>
         </div>}
       </div>
-      {isChatOpen && loggedInUser && <ChatHeader />}
+      {currChat && <ChatHeader />}
     </div>
   )
 }

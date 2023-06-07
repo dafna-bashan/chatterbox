@@ -1,19 +1,14 @@
-import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import React from 'react'
+import { useSelector } from 'react-redux'
 
 export function ChatHeader() {
 
     const currChat = useSelector(state => state.chatModule.currChat)
     const loggedInUser = useSelector(state => state.userModule.loggedInUser)
+    // console.log(currChat.title, isGroupChat, otherMembers);    
+    
     const isGroupChat = currChat.members.length > 2
     const otherMembers = currChat.members.filter(member => member._id !== loggedInUser._id)
-    // console.log(currChat.title, isGroupChat, otherMembers);
-    const navigate = useNavigate()
-
-    useEffect(() => {
-        if (!loggedInUser) navigate('/login')
-    }, [])
 
     return (
         <div className="chat-header full">

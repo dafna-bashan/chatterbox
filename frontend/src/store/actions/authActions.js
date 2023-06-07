@@ -41,6 +41,7 @@ export function logout() {
       await authService.logout()
       dispatch({ type: 'SET_USER', user: null })
       dispatch({ type: 'REMOVE_ERROR' })
+      dispatch({ type: 'SET_CHAT', currChat: null })
     } catch (err) {
       dispatch({ type: 'SET_ERROR', err })
       console.log('UserActions: err in logout', err)

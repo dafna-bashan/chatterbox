@@ -19,7 +19,7 @@ export function Login() {
         if (loggedInUser) {
             console.log('logged in!');
             //if i try to go back it navigates me back to the users page, IS THIS A PROBLEM??
-            navigate('/user')
+            navigate('/chat')
         }
     }, [loggedInUser, navigate])
 

@@ -44,6 +44,8 @@ export function logout() {
     } catch (err) {
       dispatch({ type: 'SET_ERROR', err })
       console.log('UserActions: err in logout', err)
+    } finally {
+      dispatch({ type: 'LOADING_DONE' })
     }
   }
 }

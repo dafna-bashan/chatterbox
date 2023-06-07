@@ -1,16 +1,7 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
-import { logout } from '../store/actions/authActions'
 import { Link } from 'react-router-dom'
 
-export function UserManu({ closeFunc, isChatOpen }) {
-
-    const dispatch = useDispatch()
-
-    const onLogout = () => {
-        console.log('logout')
-        dispatch(logout())
-    }
+export function UserManu({ closeFunc, isChatOpen, onLogout }) {
 
 
     return (

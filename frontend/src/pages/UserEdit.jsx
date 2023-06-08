@@ -48,7 +48,7 @@ export function UserEdit() {
     const onUpdateUser = (ev) => {
         ev.preventDefault()
         console.log('updated!');
-        dispatch(updateUser(user))
+        dispatch(updateUser(user, true))
     }
 
     useEffect(() => {

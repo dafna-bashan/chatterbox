@@ -1,11 +1,62 @@
 [
     {
-        "_id": "",
-        "firstName": "",
-        "lastName": "",
-        "email": "",
+        "email": "rachel@gmail.com",
+        "firstName": "Rachel",
+        "lastName": "Green",
+        "password": "$2b$10$7oVGy8MAFwdjA855Ojtj7.QS5h1w1fJuDo.IAa2SKrRRIYtbZHTh.",
         "bio": "",
-        "phone": 0,
-        "password": ""
+        "phone": "",
+        "imgUrl": "https://res.cloudinary.com/depjjubya/image/upload/v1683191002/rachel_c4swwf.png",
+        "chatsId": []
+    },
+    {
+        "email": "phoebe@gmail.com",
+        "firstName": "Phoebe",
+        "lastName": "Buffay",
+        "password": "$2b$10$kdAjKuvMNBfbl4IjQ8VGTOSbjL8I8E85wu18EHpsChX1OXA/aqpiO",
+        "bio": "",
+        "phone": "",
+        "imgUrl": "https://res.cloudinary.com/depjjubya/image/upload/v1683191074/phoebe_l3z28b.png",
+        "chatsId": []
+    },
+    {
+        "email": "monica@gmail.com",
+        "firstName": "Monica",
+        "lastName": "Geller",
+        "password": "$2b$10$yIWLQ8RmCwL98DXyT9rM4.pAZMHPijsfLzakzRorRp89N02RryYwm",
+        "bio": "",
+        "phone": "",
+        "imgUrl": "https://res.cloudinary.com/depjjubya/image/upload/v1683191129/monica_j5egfg.png",
+        "chatsId": []
+    },
+    {
+        "email": "joey@gmail.com",
+        "firstName": "Joey",
+        "lastName": "Tribbiani",
+        "password": "$2b$10$/bGMD7XVI7UEso35864CWeji8UjibF.K0IXv3LNitVeLEj8N312my",
+        "bio": "",
+        "phone": "",
+        "imgUrl": "https://res.cloudinary.com/depjjubya/image/upload/v1683191214/joey_dq9nt0.png",
+        "chatsId": []
+    },
+    {
+        "email": "ross@gmail.com",
+        "firstName": "Ross",
+        "lastName": "Geller",
+        "password": "$2b$10$WTFuMWph8LqpM8tcFgEcgewzO9NHocA9HLs2H9lTypH6WCD06EBgK",
+        "bio": "",
+        "phone": "",
+        "imgUrl": "https://res.cloudinary.com/depjjubya/image/upload/v1683192008/ross_ou6tlr.png",
+        "chatsId": []
+    },
+    {
+        "email": "chandler@gmail.com",
+        "firstName": "Chandler",
+        "lastName": "Bing",
+        "password": "$2b$10$ghz1CZRHjIIb9vjI3nCC7OJt/Hk2kZPm7uSwQ.aBF2m.9dougwq36",
+        "bio": "",
+        "phone": "",
+        "imgUrl": "https://res.cloudinary.com/depjjubya/image/upload/v1683192069/chandler_l4avud.png",
+        "chatsId": []
     }
 ]

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { socketService, SOCKET_EMIT_SEND_MSG, SOCKET_EVENT_ADD_MSG, SOCKET_EMIT_SET_CHAT_ID } from '../services/socket.service'
+import { socketService, SOCKET_EMIT_SEND_MSG, SOCKET_EVENT_ADD_MSG, SOCKET_EMIT_SET_CHAT_ID, SOCKET_EMIT_LOGIN } from '../services/socket.service'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { ChatSideBar } from '../cmps/ChatSideBar'
@@ -7,7 +7,8 @@ import { MsgList } from '../cmps/MsgList'
 import { AddMsg } from '../cmps/AddMsg'
 import { addChat, loadChat, loadChats, updateChat } from '../store/actions/chatActions'
 import { utilService } from '../services/utilService'
-import { loadUsers } from '../store/actions/userActions'
+import { loadUser, loadUsers, updateUser } from '../store/actions/userActions'
+import { userService } from '../services/userService'
 
 export function ChatApp() {
 
@@ -31,6 +32,7 @@ export function ChatApp() {
 
     useEffect(() => {
         // if (!loggedInUser) navigate('/login')
+        // if (currChat) onUpdateChatMembers()
         socketService.on(SOCKET_EVENT_ADD_MSG, onLoadChats)
         socketService.emit(SOCKET_EMIT_SET_CHAT_ID, currChat?._id)
         return () => {
@@ -40,7 +42,7 @@ export function ChatApp() {
     }, [currChat?._id])
 
     function onLoadChats(chatId) {
-        dispatch(loadChat(chatId))
+        if (currChat._id === chatId) dispatch(loadChat(chatId))
         dispatch(loadChats(loggedInUser._id))
     }
 
@@ -75,6 +77,23 @@ export function ChatApp() {
         dispatch(updateChat(updatedChat))
     }
 
+    // function onUpdateChatMembers() {
+    //     currChat.members.forEach(async (member) => {
+    //         const user = await getUserById(member._id)
+    //         if (!user.chatsId.includes(currChat._id)) {
+    //             user.chatsId.push(currChat._id)
+    //         }
+    //         const isLoggedIn = member._id === loggedInUser._id
+    //         console.log('isLoggedIn', isLoggedIn);
+    //         dispatch(updateUser(user, isLoggedIn))
+    //     })
+    // }
+
+    // function getUserById(memberId) {
+    //     // dispatch(loadUser(memberId))
+    //     return userService.getById(memberId)
+    // }
+
 
     function onAddChat(selectedUser) {
         console.log('add chat');
@@ -85,6 +104,7 @@ export function ChatApp() {
         }
         const members = [selectedUser, miniLoggedInUser]
         dispatch(addChat({ members }))
+        dispatch(loadChats())
     }
 
     function onLoadChat(chatId) {
@@ -97,12 +117,9 @@ export function ChatApp() {
             <React.Fragment>
                 <ChatSideBar chats={chats} users={users} loggedInUser={loggedInUser} onAddChat={onAddChat} onLoadChat={onLoadChat} />
                 <div className="chat-container flex column full">
-                    {currChat?.msgs.length ?
-                        <React.Fragment>
-                            <MsgList msgs={currChat.msgs} />
-                            <AddMsg msg={msg} handleChange={handleChange} sendMsg={sendMsg} />
-                        </React.Fragment> : <div className="welcome">Chatterbox</div>
-                    }
+                    {currChat?.msgs.length ? <MsgList msgs={currChat.msgs} /> : null}
+                    {currChat._id && <AddMsg msg={msg} handleChange={handleChange} sendMsg={sendMsg} />}
+                    {!currChat._id && <div className="welcome">Chatterbox</div>}
                 </div>
             </React.Fragment>
         </div>

@@ -86,7 +86,8 @@ async function add(user) {
             password: user.password,
             bio: '',
             phone: '',
-            imgUrl: ''
+            imgUrl: '',
+            // chatsId: []
         }
         const collection = await dbService.getCollection('user')
         await collection.insertOne(userToAdd)

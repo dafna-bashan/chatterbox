@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function SearchResultsPreview({ res, onAddChat }) {
+export function SearchResultsPreview({ res, onAddChat, toggleSearch }) {
 
     const miniUser = {
         _id: res._id,
@@ -9,6 +9,10 @@ export function SearchResultsPreview({ res, onAddChat }) {
     }
 
     return (
-        <div onClick={() => onAddChat(miniUser)}>{res.firstName} {res.lastName}</div>
+        <div onClick={() => {
+            onAddChat(miniUser)
+            toggleSearch()
+        }
+        }>{res.firstName} {res.lastName}</div>
     )
 }

@@ -18,11 +18,11 @@ function setupSocketAPI(http) {
         })
         socket.on('chat-set-chatId', chatId => {
             if (socket.myChatId === chatId) return
-            if (socket.myChatId) {
-                socket.leave(socket.myChatId)
-                logger.info(`Socket is leaving chatId ${socket.myChatId} [id: ${socket.id}]`)
+            // if (socket.myChatId) {
+            //     socket.leave(socket.myChatId)
+            //     logger.info(`Socket is leaving chatId ${socket.myChatId} [id: ${socket.id}]`)
 
-            }
+            // }
             socket.join(chatId)
             socket.myChatId = chatId
             logger.info(`Socket is joining chatId ${socket.myChatId} [id: ${socket.id}]`)
@@ -33,14 +33,14 @@ function setupSocketAPI(http) {
             //TODO - EMIT ONLY TO SOCKETS IN THE SAME CHAT - check for bugs
 
             // emits to all sockets:
-            // gIo.emit('chat-add-msg', msg)
+            // gIo.emit('chat-add-msg', chatId)
             // emits to all sockets except the sender
             // socket.broadcast.emit('chat-add-msg', chatId)
             // emits only to sockets in the same chat
-            gIo.to(socket.myChatId).emit('chat-add-msg', chatId)
+            // gIo.to(socket.myChatId).emit('chat-add-msg', chatId)
             // emits only to sockets in the same chat except the sender
-            // socket.broadcast.to(socket.myChatId).emit('chat-add-msg', chatId)
-
+            socket.broadcast.to(socket.myChatId).emit('chat-add-msg', chatId)
+            // emitToUser({ type, data, userId })
         })
         socket.on('user-watch', userId => {
             logger.info(`user-watch from socket [id: ${socket.id}], on user ${userId}`)

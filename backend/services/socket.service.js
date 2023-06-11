@@ -16,20 +16,28 @@ function setupSocketAPI(http) {
             logger.info(`Socket disconnected [id: ${socket.id}]`)
 
         })
-        socket.on('chat-set-chatId', chatId => {
-            if (socket.myChatId === chatId) return
+        socket.on('chat-set-chatId', user => {
+            // if (socket.myChatId === chatId) return
             // if (socket.myChatId) {
             //     socket.leave(socket.myChatId)
             //     logger.info(`Socket is leaving chatId ${socket.myChatId} [id: ${socket.id}]`)
 
             // }
-            socket.join(chatId)
-            socket.myChatId = chatId
-            logger.info(`Socket is joining chatId ${socket.myChatId} [id: ${socket.id}]`)
+            // console.log(user.chatsId);
+            user.chatsId.forEach(chatId => {
+
+                socket.join(chatId)
+                logger.info(`Socket is joining chatId ${chatId} [id: ${socket.id}]`)
+
+            })
+            // socket.myChatId = chatId
+            // logger.info(`Socket is joining chatId ${socket.myChatId} [id: ${socket.id}]`)
 
         })
         socket.on('chat-send-msg', chatId => {
-            logger.info(`New chat msg from socket [id: ${socket.id}], emitting to chatId ${socket.myChatId}`)
+            // logger.info(`New chat msg from socket [id: ${socket.id}], emitting to chatId ${socket.myChatId}`)
+            logger.info(`New chat msg from socket [id: ${socket.id}], emitting to chatId ${chatId}`)
+
             //TODO - EMIT ONLY TO SOCKETS IN THE SAME CHAT - check for bugs
 
             // emits to all sockets:
@@ -39,7 +47,9 @@ function setupSocketAPI(http) {
             // emits only to sockets in the same chat
             // gIo.to(socket.myChatId).emit('chat-add-msg', chatId)
             // emits only to sockets in the same chat except the sender
-            socket.broadcast.to(socket.myChatId).emit('chat-add-msg', chatId)
+            // socket.broadcast.to(socket.myChatId).emit('chat-add-msg', chatId)
+            socket.broadcast.to(chatId).emit('chat-add-msg', chatId)
+
             // emitToUser({ type, data, userId })
         })
         socket.on('user-watch', userId => {

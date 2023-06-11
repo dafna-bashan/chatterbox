@@ -2,15 +2,15 @@ import React from 'react'
 
 export function SearchResultsPreview({ res, onAddChat, toggleSearch }) {
 
-    const miniUser = {
-        _id: res._id,
-        firstName: res.firstName,
-        lastName: res.lastName
-    }
+    // const miniUser = {
+    //     _id: res._id,
+    //     firstName: res.firstName,
+    //     lastName: res.lastName
+    // }
 
     return (
         <div onClick={() => {
-            onAddChat(miniUser)
+            onAddChat(res)
             toggleSearch()
         }
         }>{res.firstName} {res.lastName}</div>

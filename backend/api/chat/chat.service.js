@@ -1,6 +1,7 @@
 const dbService = require('../../services/db.service')
 const logger = require('../../services/logger.service')
 const ObjectId = require('mongodb').ObjectId
+const userService = require('../user/user.service')
 
 module.exports = {
     query,
@@ -15,7 +16,7 @@ async function query(userId) {
     try {
         // console.log(userId);
         const collection = await dbService.getCollection('chat')
-        var chats = await collection.find({ "members._id" : userId }).toArray()
+        var chats = await collection.find({ "members._id": userId }).toArray()
         chats = chats.map(chat => {
             chat.createdAt = ObjectId(chat._id).getTimestamp()
             // Returning fake fresh data
@@ -66,15 +67,28 @@ async function update(chat) {
 
 async function add(chat) {
     console.log('chat service', chat)
+    const members = chat.members.map(member => {
+        return {
+            _id: member._id,
+            firstName: member.firstName,
+            lastName: member.lastName
+        }
+    })
     const newChat = {
         title: chat.title,
         description: chat.description,
-        members: chat.members,
+        members,
         msgs: []
     }
     try {
         const collection = await dbService.getCollection('chat')
-        await collection.insertOne(newChat)
+        const savedChat = await collection.insertOne(newChat)
+        // console.log(savedChat.insertedId);
+        // members.forEach(async (member) => {
+        //     if (member.chatsId) member.chatsId.push(savedChat.insertedId)
+        //     else member.chatsId = [savedChat.insertedId]
+        //     await userService.update(member)
+        // });
         return newChat
     } catch (err) {
         logger.error('cannot insert chat', err)

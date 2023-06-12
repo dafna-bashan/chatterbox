@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { socketService, SOCKET_EMIT_SEND_MSG, SOCKET_EVENT_ADD_MSG, SOCKET_EMIT_SET_CHAT_ID } from '../services/socket.service'
+import { socketService, SOCKET_EMIT_SEND_MSG, SOCKET_EVENT_ADD_MSG, SOCKET_EMIT_SET_CHAT_ID, SOCKET_EMIT_START_NEW_CHAT, SOCKET_EVENT_ADDED_TO_CHAT } from '../services/socket.service'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { ChatSideBar } from '../cmps/ChatSideBar'
@@ -33,19 +33,33 @@ export function ChatApp() {
     useEffect(() => {
         // if (!loggedInUser) navigate('/login')
         // if (currChat) onUpdateChatMembers()
+        socketService.login(loggedInUser._id)
         socketService.on(SOCKET_EVENT_ADD_MSG, onLoadChats)
+        socketService.on(SOCKET_EVENT_ADDED_TO_CHAT, onLoadChats)
         // console.log(loggedInUser.chatsId);
-        socketService.emit(SOCKET_EMIT_SET_CHAT_ID, loggedInUser)
+        if (loggedInUser?.chatsId) {
+            console.log('emit chat id');
+            socketService.emit(SOCKET_EMIT_SET_CHAT_ID, loggedInUser.chatsId)
+        }
         return () => {
             socketService.off(SOCKET_EVENT_ADD_MSG, onLoadChats)
 
         }
-    }, [currChat?._id])
+    }, [])
 
     function onLoadChats(chatId) {
-        if (currChat?._id === chatId) dispatch(loadChat(chatId))
+        // console.log(`onLoadChats: chatid ${chatId} 'currchatid' ${currChat._id}`);
+        if (currChat?._id === chatId) {
+            console.log('load curr chat');
+            dispatch(loadChat(chatId))
+        }
         dispatch(loadChats(loggedInUser._id))
     }
+
+    useEffect(() => {
+        console.log('curr chat', currChat?._id);
+    }, [currChat?._id])
+
 
     function handleChange(ev) {
         const { name, value } = ev.target
@@ -54,7 +68,10 @@ export function ChatApp() {
 
     function sendMsg(ev) {
         ev.preventDefault()
-        socketService.emit(SOCKET_EMIT_SEND_MSG, currChat._id)
+        const otherMember = currChat.members.filter(member => member._id !== loggedInUser._id)
+        // console.log('curr chat', currChat, loggedInUser, otherMember[0]._id);
+        if (!currChat.msgs.length) socketService.emit(SOCKET_EMIT_START_NEW_CHAT, { chatId: currChat._id, toUserId: otherMember[0]._id })
+        socketService.emit(SOCKET_EMIT_SEND_MSG, { chatId: currChat._id, msg: msg.txt })
         // for now - we add the msg ourself
         addMsg(msg)
         setMsg({ txt: '' })
@@ -109,6 +126,7 @@ export function ChatApp() {
 
     useEffect(() => {
         onUpdateChatMembers()
+        dispatch(loadUsers())
     }, [chats?.length])
 
     function onLoadChat(chatId) {

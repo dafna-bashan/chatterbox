@@ -4,6 +4,7 @@ import { chatService } from '../../services/chatService'
 export function loadChats(userId) {
   return async dispatch => {
     try {
+      console.log('load chats');
       dispatch({ type: 'LOADING_START' })
       const chats = await chatService.query(userId)
       dispatch({ type: 'SET_CHATS', chats })

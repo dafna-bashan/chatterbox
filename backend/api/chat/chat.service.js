@@ -89,7 +89,9 @@ async function add(chat) {
         //     else member.chatsId = [savedChat.insertedId]
         //     await userService.update(member)
         // });
-        return newChat
+        console.log('savedChat', savedChat.ops[0]);
+        return savedChat.ops[0];
+        // return newChat
     } catch (err) {
         logger.error('cannot insert chat', err)
         throw err

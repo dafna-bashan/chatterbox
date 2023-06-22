@@ -18,7 +18,9 @@ function getUsers() {
 
 function getById(userId) {
     // return storageService.get('user', userId)
-    return httpService.get(`user/${userId}`);
+    const user = httpService.get(`user/${userId}`);
+    // sessionStorage.setItem('loggedinUser', JSON.stringify(user));
+    return user
 }
 
 
@@ -31,6 +33,7 @@ async function update(user) {
     // const updatedUser = await storageService.put('user', user)
     const updatedUser = await httpService.put(`user/${user._id}`, user);
     sessionStorage.setItem('loggedinUser', JSON.stringify(updatedUser));
+    return updatedUser
 }
 
 

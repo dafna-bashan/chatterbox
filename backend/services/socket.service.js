@@ -3,6 +3,7 @@ const logger = require('./logger.service')
 var gIo = null
 
 var userSocketMap = {}
+var chatUserMap = {}
 
 function setupSocketAPI(http) {
     gIo = require('socket.io')(http, {
@@ -16,7 +17,7 @@ function setupSocketAPI(http) {
             logger.info(`Socket disconnected [id: ${socket.id}]`)
 
         })
-        socket.on('chat-set-chatId', chatsId => {
+        socket.on('chat-set-chatId', ({chatsId, userId}) => {
 
             // if (socket.myChatId === chatId) return
             // if (socket.myChatId) {
@@ -25,10 +26,15 @@ function setupSocketAPI(http) {
 
             // }
             // console.log(user.chatsId);
-            chatsId.forEach(chatId => {
-                socket.join(chatId)
-                logger.info(`Socket is joining chatId ${chatId} [id: ${socket.id}]`)
-            })
+            if (chatsId?.length) {
+                chatsId.forEach(chatId => {
+                    socket.join(chatId)
+                    logger.info(`Socket is joining chatId ${chatId} [id: ${socket.id}]`)
+                    if (chatUserMap[chatId] && !chatUserMap[chatId].includes(userId)) chatUserMap[chatId].push(userId)
+                    else chatUserMap[chatId] = [userId]
+                })
+            }
+            console.log('chatUserMap', chatUserMap);
             // socket.myChatId = chatId
             // logger.info(`Socket is joining chatId ${socket.myChatId} [id: ${socket.id}]`)
 
@@ -53,10 +59,11 @@ function setupSocketAPI(http) {
             logger.info(`Start new chat [id: ${socket.id}], emitting to chatId ${data.chatId} userId${data.toUserId}`)
             // console.log('start new chat', data.chatId, data.toUserId);
             const recipientSocketId = userSocketMap[data.toUserId]
-            console.log('user socket map', userSocketMap);
+            // console.log('user socket map', userSocketMap);
 
             if (recipientSocketId) {
                 console.log('new chat');
+                // socket.join(chatId)
                 socket.broadcast.to(recipientSocketId).emit('added-to-new-chat', data.chatId)
             }
         })
@@ -69,10 +76,10 @@ function setupSocketAPI(http) {
             logger.info(`Setting socket.userId = ${userId} for socket [id: ${socket.id}]`)
             socket.userId = userId
             userSocketMap[userId] = socket.id
-            // console.log('user socket map', userSocketMap);
+            console.log('user socket map', userSocketMap);
 
         })
-        socket.on('unset-user-socket', () => {
+        socket.on('unset-user-socket', userId => {
             logger.info(`Removing socket.userId for socket [id: ${socket.id}]`)
             userSocketMap[userId] = null
             delete socket.userId

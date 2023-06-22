@@ -1,12 +1,13 @@
 const initialState = {
   chats: [],
-  currChat: {
-    _id: "",
-    title: "",
-    description: "",
-    members: [],
-    msgs: []
-  }
+  currChat: null
+  // currChat: {
+  //   _id: "",
+  //   title: "",
+  //   description: "",
+  //   members: [],
+  //   msgs: []
+  // }
 }
 
 export function chatReducer(state = initialState, action = {}) {
@@ -20,7 +21,7 @@ export function chatReducer(state = initialState, action = {}) {
     case 'REMOVE_CHAT':
       return {
         ...state,
-        users: state.chats.filter(chat => chat._id !== action.chatId)
+        chats: state.chats.filter(chat => chat._id !== action.chatId)
       }
     case 'UPDATE_CHAT':
       return {

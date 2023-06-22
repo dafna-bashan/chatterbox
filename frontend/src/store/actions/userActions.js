@@ -16,12 +16,13 @@ export function loadUsers() {
   }
 }
 
-export function loadUser() {
+export function loadUser(userId) {
+  console.log('load user');
   return async dispatch => {
     try {
       dispatch({ type: 'LOADING_START' })
-      const user = await userService.getById()
-      // dispatch({ type: 'SET_USERS', users })
+      const user = await userService.getById(userId)
+      dispatch({ type: 'SET_USER', user })
       return user
     } catch (err) {
       console.log('UserActions: err in loadUser', err)

@@ -15,7 +15,7 @@ export function ChatHeader() {
             {isGroupChat &&
                 <div>
                     <div>
-                        {currChat.title}
+                        {currChat?.title}
                     </div>
                     <div>{otherMembers.map(member => <span>{member.firstName}, </span>)}
                         <span>you</span>

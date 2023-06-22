@@ -62,8 +62,9 @@ export function updateChat(chat) {
   return async dispatch => {
     try {
       dispatch({ type: 'LOADING_START' })
-      await chatService.update(chat)
-      dispatch({ type: 'UPDATE_CHAT', chat })
+      const updatedChat = await chatService.update(chat)
+      dispatch({ type: 'UPDATE_CHAT', chat: updatedChat })
+      return updatedChat
     } catch (err) {
       console.log('ChatActions: err in updateChat', err)
     }

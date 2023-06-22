@@ -26,29 +26,45 @@ export function ChatApp() {
         if (!loggedInUser) navigate('/login')
         else {
             dispatch(loadChats(loggedInUser._id))
-            dispatch(loadUsers())
         }
     }, [dispatch, navigate, loggedInUser])
 
     useEffect(() => {
         // if (!loggedInUser) navigate('/login')
         // if (currChat) onUpdateChatMembers()
-        socketService.login(loggedInUser._id)
-        socketService.on(SOCKET_EVENT_ADD_MSG, onLoadChats)
-        socketService.on(SOCKET_EVENT_ADDED_TO_CHAT, onLoadChats)
-        // console.log(loggedInUser.chatsId);
-        if (loggedInUser?.chatsId) {
+        dispatch(loadUsers())
+        // dispatch(loadUser(loggedInUser._id))
+        socketService.login(loggedInUser?._id)
+        socketService.on(SOCKET_EVENT_ADD_MSG, (chatId) => {
+            console.log('add msg', currChat, chats, loggedInUser._id);
+            onLoadChats(chatId)
+
+        })
+        socketService.on(SOCKET_EVENT_ADDED_TO_CHAT, (chatId) => {
+            socketService.emit(SOCKET_EMIT_SET_CHAT_ID, { chatsId: loggedInUser.chatsId, userId: loggedInUser._id })
+            onLoadChats(chatId)
+        })
+        console.log('loggedInUser.chatsId', loggedInUser?.chatsId);
+        if (loggedInUser?.chatsId?.length) {
             console.log('emit chat id');
-            socketService.emit(SOCKET_EMIT_SET_CHAT_ID, loggedInUser.chatsId)
+            socketService.emit(SOCKET_EMIT_SET_CHAT_ID, { chatsId: loggedInUser.chatsId, userId: loggedInUser._id })
         }
         return () => {
-            socketService.off(SOCKET_EVENT_ADD_MSG, onLoadChats)
-
+            socketService.off(SOCKET_EVENT_ADD_MSG)
+            // socketService.logout(loggedInUser._id)
         }
     }, [])
 
+    //TODO - BUGG, NOT ALWAYS LOADING, NOT LOADING THE CURR CHAT???
+    // the currChat in going to the initial state when recieving the event. WHY???
+    // in the redux devtool i can see the updated currChat details but in the logs it is the initial state.
+
+
     function onLoadChats(chatId) {
-        // console.log(`onLoadChats: chatid ${chatId} 'currchatid' ${currChat._id}`);
+        console.log(`onLoadChats: chatid ${chatId} 'currchatid' ${currChat?._id}`);
+        console.log('curr chat onload', currChat);
+        console.log(currChat?._id === chatId);
+
         if (currChat?._id === chatId) {
             console.log('load curr chat');
             dispatch(loadChat(chatId))
@@ -57,7 +73,7 @@ export function ChatApp() {
     }
 
     useEffect(() => {
-        console.log('curr chat', currChat?._id);
+        console.log('curr chat', currChat);
     }, [currChat?._id])
 
 
@@ -96,7 +112,8 @@ export function ChatApp() {
     }
 
     // useEffect(() => {
-    //     console.log('users', users);
+    //     // console.log('users', users);
+    //     dispatch(loadUser(loggedInUser._id))
     // }, [users])
 
     function onAddChat(selectedUser) {

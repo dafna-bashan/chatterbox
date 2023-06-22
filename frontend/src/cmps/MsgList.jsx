@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { MsgPreview } from './MsgPreview'
 
-export function MsgList({ msgs }) {
+export function MsgList({ msgs, loggedInUser }) {
 
     const msgsEndRef = useRef(null)
 
@@ -15,7 +15,7 @@ export function MsgList({ msgs }) {
 
     return (
         <div className="msg-list full">
-            {msgs.map((msg, idx) => <MsgPreview key={idx} msg={msg} />)}
+            {msgs.map((msg, idx) => <MsgPreview key={idx} msg={msg} loggedInUser={loggedInUser} />)}
             <div ref={msgsEndRef}></div>
         </div>
     )

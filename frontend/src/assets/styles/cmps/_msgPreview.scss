@@ -1,4 +1,30 @@
 .msg-preview {
-    margin   : 10px 25px;
-    font-size: 14px;
+    margin       : 10px 25px;
+    font-size    : 14px;
+    display         : flex;
+    flex-direction  : column;
+    
+    >* {
+        border-radius: 5px;
+        padding: 5px 10px;
+        width: fit-content;
+    }
+    
+    &.me{
+        align-items: flex-end;
+    }
+
+    .me {
+        background-color: #ededed;
+    }
+
+    .other {
+        background-color: #fff;
+    }
+
+    .name {
+        font-size: 12.5px;
+        color    : gray;
+    }
+
 }

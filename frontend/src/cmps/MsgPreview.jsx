@@ -1,10 +1,12 @@
 import React from 'react'
 
-export function MsgPreview({ msg }) {
+export function MsgPreview({ msg, loggedInUser }) {
   return (
-    <div className="msg-preview">
-      <div>{msg.from.firstName}</div>
-      <div>{msg.txt}</div> 
+    <div className={loggedInUser._id === msg.from._id ? "msg-preview me" : "msg-preview"}>
+      <div className={loggedInUser._id === msg.from._id ? "me" : "other"}>
+        <div className="name">{msg.from.firstName}</div>
+        <div className="msg">{msg.txt}</div>
+      </div>
 
     </div>
   )

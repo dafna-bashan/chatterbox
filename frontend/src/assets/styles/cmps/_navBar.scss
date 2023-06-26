@@ -1,19 +1,28 @@
 .nav-bar {
-    width        : 100vw;
-    padding      : 15px 72px;
     // box-shadow: 0px 2px 4px 0px rgba(160, 160, 160, 0.83);
     border-bottom: 1px solid #e0e0e0;
-    align-items  : center;
 
-    &.chat-view {
-        width  : 350px;
-        padding: 15px;
+    // >* {
+    //     padding: 15px;
+    // }
+
+    .profile-view {
+        width  : 100vw;
+        padding: 15px 72px;
+    }
+
+    .chat-view {
+        width       : 350px;
+        border-right: 1px solid #e0e0e0;
+        padding     : 15px;
+
     }
 
     img {
-        height      : 32px;
-        width       : 32px;
-        margin-right: 10px;
+        height         : 32px;
+        width          : 32px;
+        margin-left    : 10px;
+        // margin-right: 10px;
     }
 
     .user {
@@ -35,7 +44,11 @@
 
 @media (max-width: $narrow-breakpoint) {
     .nav-bar {
-        padding: 23px;
+        // padding: 23px;
+
+        .profile-view ,.chat-view {
+            padding: 15px;
+        }
 
         .username {
             display: none;

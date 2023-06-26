@@ -27,8 +27,8 @@ export function NavBar() {
   const isChatOpen = window.location.href.endsWith('chat')
 
   return (
-    <div className="flex align-center">
-      <div className={`nav-bar flex space-between ${isChatOpen ? 'chat-view' : ''} `}>
+    <div className="nav-bar flex align-center">
+      <div className={`flex space-between ${isChatOpen ? 'chat-view' : 'profile-view'} `}>
         <div>Chatterbox</div>
         {loggedInUser && <div>
           <ClickAwayListener onClickAway={() => setIsManuOpen(false)}>

@@ -155,7 +155,7 @@ export function ChatApp() {
     return (
         <div className="chat-app flex">
             <React.Fragment>
-                <ChatSideBar chats={chats} users={users} loggedInUser={loggedInUser} onAddChat={onAddChat} onLoadChat={onLoadChat} />
+                <ChatSideBar currChatId={currChat?._id} chats={chats} users={users} loggedInUser={loggedInUser} onAddChat={onAddChat} onLoadChat={onLoadChat} />
                 <div className="chat-container flex column full">
                     {currChat?.msgs.length ? <MsgList msgs={currChat.msgs} loggedInUser={loggedInUser} /> : null}
                     {currChat?._id && <AddMsg msg={msg} handleChange={handleChange} sendMsg={sendMsg} />}

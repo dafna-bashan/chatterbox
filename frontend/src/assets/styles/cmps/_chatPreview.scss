@@ -1,4 +1,21 @@
 .chat-preview{
     padding: 10px 0;
     border-bottom: 1px solid #e0e0e0;
+
+    &.current{
+        background-color: #f9f9f9;
+    }
+
+    .last-msg{
+        font-size: 14px;
+        color:#5a5a5a;;
+    }
+
+    img{
+        width: 45px;
+        height: 45px;
+        margin: 0 10px;
+    }
+
+
 }

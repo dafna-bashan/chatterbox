@@ -71,7 +71,8 @@ async function add(chat) {
         return {
             _id: member._id,
             firstName: member.firstName,
-            lastName: member.lastName
+            lastName: member.lastName,
+            imgUrl: member.imgUrl
         }
     })
     const newChat = {

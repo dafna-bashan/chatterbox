@@ -19,10 +19,9 @@
     }
 
     img {
-        height         : 32px;
-        width          : 32px;
-        margin-left    : 10px;
-        // margin-right: 10px;
+        height: 32px;
+        width : 32px;
+        margin: 0 10px;
     }
 
     .user {
@@ -46,7 +45,8 @@
     .nav-bar {
         // padding: 23px;
 
-        .profile-view ,.chat-view {
+        .profile-view,
+        .chat-view {
             padding: 15px;
         }
 

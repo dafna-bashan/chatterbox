@@ -10,7 +10,7 @@ export function NavBar() {
 
   const [isManuOpen, setIsManuOpen] = useState(false)
   const loggedInUser = useSelector(state => state.userModule.loggedInUser)
-  const currChat = useSelector(state=> state.chatModule.currChat)
+  const currChat = useSelector(state => state.chatModule.currChat)
   const dispatch = useDispatch()
 
   const toggleManu = () => {
@@ -29,12 +29,12 @@ export function NavBar() {
   return (
     <div className="nav-bar flex align-center">
       <div className={`flex align-center space-between ${isChatOpen ? 'chat-view' : 'profile-view'} `}>
-        <div>Chatterbox</div>
+        {!isChatOpen && <div>Chatterbox</div>}
         {loggedInUser && <div>
           <ClickAwayListener onClickAway={() => setIsManuOpen(false)}>
             <div className="user" onClick={toggleManu}>
-              <span className="username">{loggedInUser.firstName}</span>
               <img src={loggedInUser.imgUrl ? loggedInUser.imgUrl : userImg} alt="" />
+              <span className="username">{loggedInUser.firstName}</span>
               {isManuOpen && <UserManu closeFunc={() => setIsManuOpen(false)} isChatOpen={isChatOpen} onLogout={onLogout} />}
             </div>
           </ClickAwayListener>

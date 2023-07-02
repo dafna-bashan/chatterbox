@@ -1,4 +1,5 @@
 import React from 'react'
+import userImg from '../assets/img/user-img.png'
 
 export function SearchResultsPreview({ res, onAddChat, toggleSearch }) {
 
@@ -9,10 +10,14 @@ export function SearchResultsPreview({ res, onAddChat, toggleSearch }) {
     // }
 
     return (
-        <div onClick={() => {
+        <div className="search-results-preview flex align-center" onClick={() => {
             onAddChat(res)
             toggleSearch()
         }
-        }>{res.firstName} {res.lastName}</div>
+        }>
+            <img src={res.imgUrl || userImg} alt={res.firstName} />
+            <div>{res.firstName} {res.lastName}</div>
+
+        </div>
     )
 }

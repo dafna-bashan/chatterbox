@@ -11,11 +11,11 @@ export function MsgList({ msgs, loggedInUser }) {
 
     useEffect(() => {
         scrollToBottom()
-    }, [msgs.length]);
+    }, [msgs?.length]);
 
     return (
         <div className="msg-list full">
-            {msgs.map((msg, idx) => <MsgPreview key={idx} msg={msg} loggedInUser={loggedInUser} />)}
+            {msgs && msgs.map((msg, idx) => <MsgPreview key={idx} msg={msg} loggedInUser={loggedInUser} />)}
             <div ref={msgsEndRef}></div>
         </div>
     )

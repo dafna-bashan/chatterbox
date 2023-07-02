@@ -157,7 +157,7 @@ export function ChatApp() {
             <React.Fragment>
                 <ChatSideBar currChatId={currChat?._id} chats={chats} users={users} loggedInUser={loggedInUser} onAddChat={onAddChat} onLoadChat={onLoadChat} />
                 <div className="chat-container flex column full">
-                    {currChat?.msgs.length ? <MsgList msgs={currChat.msgs} loggedInUser={loggedInUser} /> : null}
+                    <MsgList msgs={currChat?.msgs} loggedInUser={loggedInUser} />
                     {currChat?._id && <AddMsg msg={msg} handleChange={handleChange} sendMsg={sendMsg} />}
                     {!currChat?._id && <div className="welcome">Chatterbox</div>}
                 </div>

@@ -12,7 +12,7 @@ export function SearchResultsPreview({ res, onAddChat, toggleSearch }) {
     return (
         <div className="search-results-preview flex align-center" onClick={() => {
             onAddChat(res)
-            toggleSearch()
+            toggleSearch(false)
         }
         }>
             <img src={res.imgUrl || userImg} alt={res.firstName} />

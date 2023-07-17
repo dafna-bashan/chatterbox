@@ -117,16 +117,11 @@ export function ChatApp() {
     //     dispatch(loadUser(loggedInUser._id))
     // }, [users])
 
-    function onAddChat(selectedUser) {
-        console.log('add chat');
-        // const miniLoggedInUser = {
-        //     _id: loggedInUser._id,
-        //     firstName: loggedInUser.firstName,
-        //     lastName: loggedInUser.lastName
-        // }
-        const members = [selectedUser, loggedInUser]
-        setCurrChatMembers([selectedUser, loggedInUser])
-        dispatch(addChat({ members }))
+    function onAddChat(chatData) {
+        let members = [...chatData.members, loggedInUser]
+        const newChat = { ...chatData, members }
+        setCurrChatMembers(members)
+        dispatch(addChat(newChat))
         dispatch(loadChats(loggedInUser._id))
     }
 

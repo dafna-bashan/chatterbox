@@ -1,7 +1,7 @@
 import React from 'react'
 import userImg from '../assets/img/user-img.png'
 
-export function SearchResultsPreview({ res, onAddChat, isGroup, onAddMember, toggleSearch }) {
+export function SearchResultsPreview({ res, setSearchMode, onSelectUser, isGroupMode }) {
 
     // const miniUser = {
     //     _id: res._id,
@@ -11,11 +11,8 @@ export function SearchResultsPreview({ res, onAddChat, isGroup, onAddMember, tog
 
     return (
         <div className="search-results-preview flex align-center" onClick={() => {
-            if (isGroup) onAddMember(res)
-            else {
-                onAddChat(res)
-                toggleSearch(false)
-            }
+            onSelectUser(res)
+            if (!isGroupMode) setSearchMode(false)
         }
         }>
             <img src={res.imgUrl || userImg} alt={res.firstName} />

@@ -72,12 +72,15 @@ async function add(chat) {
             _id: member._id,
             firstName: member.firstName,
             lastName: member.lastName,
-            imgUrl: member.imgUrl
+            imgUrl: member.imgUrl,
+            joinedAt: 0,
+            leftAt: 0
         }
     })
     const newChat = {
         title: chat.title,
         description: chat.description,
+        imgUrl: chat.imgUrl,
         members,
         msgs: []
     }

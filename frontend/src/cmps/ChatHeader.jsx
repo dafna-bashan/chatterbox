@@ -13,17 +13,17 @@ export function ChatHeader() {
 
     return (
         <div className="chat-header full">
-            {isGroupChat &&
+            {isGroupChat ?
                 <div>
                     <div>{currChat?.title}</div>
-                    <div>{otherMembers.map(member => <span>{member.firstName}, </span>)}
+                    <div>{otherMembers.map(member => <span key={member._id}>{member.firstName}, </span>)}
                         <span>you</span>
                     </div>
-                </div>}
-            {!isGroupChat && <div className='flex align-center'>
-                <img src={otherMembers[0]?.imgUrl || userImg} alt={otherMembers[0]?.firstName} />
-                <div>{otherMembers[0]?.firstName} {otherMembers[0]?.lastName}</div>
-            </div>
+                </div> :
+                <div className='flex align-center'>
+                    <img src={otherMembers[0]?.imgUrl || userImg} alt={otherMembers[0]?.firstName} />
+                    <div>{otherMembers[0]?.firstName} {otherMembers[0]?.lastName}</div>
+                </div>
             }
         </div>
     )

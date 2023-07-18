@@ -9,13 +9,15 @@
     .last-msg {
         font-size: 14px;
         color    : #5a5a5a;
-        
+
     }
 
     img {
-        width : 45px;
-        height: 45px;
-        margin: 0 10px;
+        width        : 45px;
+        height       : 45px;
+        margin       : 0 10px;
         border-radius: 45px;
+        object-fit   :cover;
+        background-color: #e2e2e2;
     }
 }

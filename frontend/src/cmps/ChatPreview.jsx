@@ -8,7 +8,7 @@ export function ChatPreview({ currChatId, chat, loggedInUser, onLoadChat }) {
   const isGroupChat = chat.members.length > 2
   const otherMembers = chat.members.filter(member => member._id !== loggedInUser._id)
   const { msgs } = chat
- console.log(otherMembers, chat); 
+
   return (
     <div className={currChatId === chat._id ? 'chat-preview current' : 'chat-preview'}>
       {isGroupChat ?

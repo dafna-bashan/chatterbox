@@ -14,10 +14,14 @@ export function ChatHeader() {
     return (
         <div className="chat-header full flex align-center">
             {isGroupChat ?
-                <div>
-                    <div>{currChat?.title}</div>
-                    <div className="members">{otherMembers.map(member => <span key={member._id}>{member.firstName}, </span>)}
-                        <span>you</span>
+                <div className='flex align-center'>
+                    <img src={currChat.imgUrl} alt={otherMembers[0]?.firstName} />
+                    <div>
+                        <div>{currChat?.title}</div>
+                        <div className="members">
+                            {otherMembers.map(member => <span key={member._id}>{member.firstName}, </span>)}
+                            <span>you</span>
+                        </div>
                     </div>
                 </div> :
                 <div className='flex align-center'>

@@ -20,7 +20,7 @@ async function query(userId) {
         var users = await userService.query()
         console.log('users', users);
         chats = chats.map(chat => {
-            chat.createdAt = ObjectId(chat._id).getTimestamp()
+            // chat.createdAt = ObjectId(chat._id).getTimestamp()
             chat.members = chat.members.map(member => {
                 console.log('member', member);
                 var user = users.find(user => user._id == member._id)

@@ -70,9 +70,10 @@ export function ChatAdd({ users, onAddChat, onToggleSearch, isSearching }) {
             members: isGroupMode ? groupMembers : chatData.members,
         }
         if (isGroupMode) {
-            setIsGroupMode(false)
+            setSearchMode(false)
+            // setIsGroupMode(false)
             setGroupCreation(false)
-            setGroupMembers([])
+            // setGroupMembers([])
         }
         onAddChat(newChat)
     }

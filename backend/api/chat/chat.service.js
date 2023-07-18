@@ -17,10 +17,36 @@ async function query(userId) {
         // console.log(userId);
         const collection = await dbService.getCollection('chat')
         var chats = await collection.find({ "members._id": userId }).toArray()
+        var users = await userService.query()
+        console.log('users', users);
         chats = chats.map(chat => {
             chat.createdAt = ObjectId(chat._id).getTimestamp()
+            chat.members = chat.members.map(member => {
+                console.log('member', member);
+                var user = users.find(user => user._id == member._id)
+                console.log('user', user);
+                return {
+                    ...member,
+                    firstName: user.firstName,
+                    lastName: user.lastName,
+                    imgUrl: user.imgUrl
+                }
+            })
+            chat.msgs = chat.msgs.map(msg => {
+                var user = users.find(user => user._id == msg.from._id)
+                return {
+                    ...msg,
+                    from: {
+                        ...msg.from,
+                        firstName: user.firstName,
+                        lastName: user.lastName
+                    }
+                }
+            })
             // Returning fake fresh data
             // chat.createdAt = Date.now() - (1000 * 60 * 60 * 24 * 3) // 3 days ago
+            console.log('chat', chat);
+            update(chat)
             return chat
         })
         return chats

@@ -12,11 +12,11 @@ export function ChatHeader() {
     const otherMembers = currChat.members.filter(member => member._id !== loggedInUser._id)
 
     return (
-        <div className="chat-header full">
+        <div className="chat-header full flex align-center">
             {isGroupChat ?
                 <div>
                     <div>{currChat?.title}</div>
-                    <div>{otherMembers.map(member => <span key={member._id}>{member.firstName}, </span>)}
+                    <div className="members">{otherMembers.map(member => <span key={member._id}>{member.firstName}, </span>)}
                         <span>you</span>
                     </div>
                 </div> :

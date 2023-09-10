@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { ImgUpload } from './ImgUpload'
 import groupImg from '../assets/img/noun-user-group-01.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 
 export function GroupAdd({ setGroupCreation, onCreateChat }) {
 
@@ -20,17 +22,17 @@ export function GroupAdd({ setGroupCreation, onCreateChat }) {
     }
 
     return (
-        <div>
+        <div className="group-add">
             <button onClick={() => setGroupCreation(false)}>Back</button>
-            <form onSubmit={(ev) => {
+            <form className="flex column" onSubmit={(ev) => {
                 ev.preventDefault()
                 console.log(groupDetails);
                 onCreateChat(groupDetails)
             }}>
-                <ImgUpload defaultImgUrl={groupImg} alt="group image" onUploadImg={onUploadImg} />
-                <input type="text" name="title" placeholder="Group title" value={groupDetails.title} onChange={handleChange} />
+                <ImgUpload defaultImgUrl={groupImg} imgUrl="" alt="group image" onUploadImg={onUploadImg} />
+                <input type="text" name="title" placeholder="*Group title" required value={groupDetails.title} onChange={handleChange} />
                 <input type="text" name="description" placeholder="Group description" value={groupDetails.description} onChange={handleChange} />
-                <button>ADD GROUP</button>
+                <button disabled={groupDetails.title.length ? false : true}><FontAwesomeIcon icon={faCircleCheck} size="2xl" className="check-icon" /></button>
             </form>
         </div>
     )

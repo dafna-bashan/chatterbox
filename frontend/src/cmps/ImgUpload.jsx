@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { cloudinaryService } from '../services/cloudinaryService'
 
-export function ImgUpload({ defaultImgUrl, alt, onUploadImg }) {
+export function ImgUpload({ defaultImgUrl, imgUrl, alt, onUploadImg }) {
 
     const [img, setImg] = useState({
-        imgUrl: defaultImgUrl,
+        imgUrl: imgUrl || '',
         height: '40px',
         width: '100%',
         isUploading: false
@@ -14,6 +14,7 @@ export function ImgUpload({ defaultImgUrl, alt, onUploadImg }) {
         if (img.imgUrl !== defaultImgUrl) {
             onUploadImg(img.imgUrl)
         }
+        // eslint-disable-next-line
     }, [img.imgUrl])
 
 
@@ -25,15 +26,19 @@ export function ImgUpload({ defaultImgUrl, alt, onUploadImg }) {
 
     const uploadMsg = () => {
         const { imgUrl, isUploading } = img
-        if (imgUrl) return 'CHANGE PHOTO'
+        if (imgUrl) return 'CHANGE'
         return isUploading ? 'UPLOADING...' : 'ADD PHOTO'
     }
 
     return (
-        <div className="img-con flex align-center">
-            <img src={img.imgUrl} alt={alt} />
-            <input type="file" onChange={uploadImg} accept="img/*" id="imgUpload" style={{ display: "none" }} />
-            <label htmlFor="imgUpload" className="img-label">{uploadMsg()}</label>
+        <div className="img-con flex align-center justify-center">
+            <img className="upload" src={img?.imgUrl ? img.imgUrl : defaultImgUrl} alt={alt} />
+            <input type="file" onChange={uploadImg} accept="image/*" id="imgUpload" style={{ display: "none" }} />
+            <label htmlFor="imgUpload" className="img-label click">{uploadMsg()}</label>
+            {img?.imgUrl && <React.Fragment>
+                <pre className="img-label"> | </pre>
+                <pre className="img-label click" onClick={() => setImg({ ...img, imgUrl: '' })}>REMOVE</pre>
+            </React.Fragment>}
         </div>
     )
 }

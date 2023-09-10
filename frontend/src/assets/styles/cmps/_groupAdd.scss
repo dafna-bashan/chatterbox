@@ -1,0 +1,32 @@
+.group-add {
+    font-size: 14px;
+
+    input {
+        height          : 48px;
+        // width        : 350px;
+        border          : 1px solid #BDBDBD;
+        border-radius   : 8px;
+        padding-left    : 10px;
+        margin-bottom   : 25px;
+    }
+
+    button {
+        background: none;
+        border    : none;
+        width     : fit-content;
+        align-self: center;
+        color     : #555555;
+
+        &:disabled {
+            color: #BDBDBD;
+        }
+    }
+
+    .check-icon {
+        width              : 70px;
+        height             : 70px;
+        // position        : relative;
+        // left            : 175px;
+        // transform: translateX(-50%);
+    }
+}

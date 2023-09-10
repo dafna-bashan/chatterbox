@@ -7,7 +7,7 @@ import { GroupMembersList } from './GroupMembersList'
 import { GroupAdd } from './GroupAdd'
 
 
-export function ChatAdd({ users, onAddChat, onToggleSearch, isSearching }) {
+export function ChatAdd({ users, onAddChat, onToggleSearch, isSearching, loggedInUser }) {
 
     const [isGroupMode, setIsGroupMode] = useState(false)
     const [isCreatingGroup, setIsCreatingGroup] = useState(false)
@@ -37,7 +37,6 @@ export function ChatAdd({ users, onAddChat, onToggleSearch, isSearching }) {
     }
 
     function onAddMember(newMember) {
-        console.log('on add member', newMember);
         var isInGroup = false
         if (groupMembers.length) {
             groupMembers.forEach(member => {
@@ -78,6 +77,9 @@ export function ChatAdd({ users, onAddChat, onToggleSearch, isSearching }) {
         onAddChat(newChat)
     }
 
+    function filterUsers() {
+        return users.filter(user => user._id !== loggedInUser._id)
+    }
 
     return (
         <div>
@@ -87,7 +89,7 @@ export function ChatAdd({ users, onAddChat, onToggleSearch, isSearching }) {
                     <FontAwesomeIcon icon={faUserGroup} onClick={() => setSearchMode(true)} />
                 </div>
                 {isGroupMode && groupMembers.length ? <GroupMembersList groupMembers={groupMembers} onRemoveMember={onRemoveMember} /> : null}
-                {isSearching ? <SearchResultsList results={users} setSearchMode={setSearchMode} onSelectUser={onSelectUser} isGroupMode={isGroupMode} /> : null}
+                {isSearching ? <SearchResultsList results={filterUsers()} loggedInUser={loggedInUser} setSearchMode={setSearchMode} onSelectUser={onSelectUser} isGroupMode={isGroupMode} /> : null}
                 <div className="bottom flex align-center justify-center">
                     {isGroupMode && groupMembers.length ? <FontAwesomeIcon className="groupMembers-arrow" icon={faCircleArrowRight} size="2xl" onClick={() => setGroupCreation(true)} /> : null}
                 </div>

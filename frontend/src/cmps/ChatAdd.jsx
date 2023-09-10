@@ -82,7 +82,7 @@ export function ChatAdd({ users, onAddChat, onToggleSearch, isSearching, loggedI
     }
 
     return (
-        <div>
+        <div className="chat-add flex column">
             {!isCreatingGroup ? <React.Fragment>
                 <div className="flex align-center">
                     <SearchBar setSearchMode={setSearchMode} isSearching={isSearching} isGroupMode={isGroupMode} />
@@ -90,9 +90,9 @@ export function ChatAdd({ users, onAddChat, onToggleSearch, isSearching, loggedI
                 </div>
                 {isGroupMode && groupMembers.length ? <GroupMembersList groupMembers={groupMembers} onRemoveMember={onRemoveMember} /> : null}
                 {isSearching ? <SearchResultsList results={filterUsers()} loggedInUser={loggedInUser} setSearchMode={setSearchMode} onSelectUser={onSelectUser} isGroupMode={isGroupMode} /> : null}
-                <div className="bottom flex align-center justify-center">
-                    {isGroupMode && groupMembers.length ? <FontAwesomeIcon className="groupMembers-arrow" icon={faCircleArrowRight} size="2xl" onClick={() => setGroupCreation(true)} /> : null}
-                </div>
+                {isGroupMode && groupMembers.length ? <div className="bottom flex align-center justify-center">
+                    <FontAwesomeIcon className="groupMembers-arrow" icon={faCircleArrowRight} size="2xl" onClick={() => setGroupCreation(true)} /> 
+                </div>: null}
             </React.Fragment> :
                 <GroupAdd setGroupCreation={setGroupCreation} onCreateChat={onCreateChat} />}
         </div>

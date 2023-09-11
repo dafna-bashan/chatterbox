@@ -13,11 +13,26 @@
     }
 
     img {
-        width        : 45px;
-        height       : 45px;
-        margin       : 0 10px;
-        border-radius: 45px;
-        object-fit   :cover;
+        width           : 49px;
+        height          : 49px;
+        margin          : 0 10px;
+        border-radius   : 45px;
+        object-fit      : cover;
         background-color: #e2e2e2;
+    }
+
+    svg {
+        width : 30px;
+        height: 30px;
+        color: white;
+    }
+
+    .group-icon {
+        width              : 49px;
+        height             : 49px;
+        margin             : 0 10px;
+        border-radius      : 40px;
+        // object-fit      : cover;
+        background-color   : #e2e2e2;
     }
 }

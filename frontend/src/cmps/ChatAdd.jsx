@@ -86,7 +86,7 @@ export function ChatAdd({ users, onAddChat, onToggleSearch, isSearching, loggedI
             {!isCreatingGroup ? <React.Fragment>
                 <div className="flex align-center">
                     <SearchBar setSearchMode={setSearchMode} isSearching={isSearching} isGroupMode={isGroupMode} />
-                    <FontAwesomeIcon icon={faUserGroup} onClick={() => setSearchMode(true)} />
+                    <FontAwesomeIcon icon={faUserGroup} onClick={() => setSearchMode(true)} style={{color: "#3d434c"}}/>
                 </div>
                 {isGroupMode && groupMembers.length ? <GroupMembersList groupMembers={groupMembers} onRemoveMember={onRemoveMember} /> : null}
                 {isSearching ? <SearchResultsList results={filterUsers()} loggedInUser={loggedInUser} setSearchMode={setSearchMode} onSelectUser={onSelectUser} isGroupMode={isGroupMode} /> : null}

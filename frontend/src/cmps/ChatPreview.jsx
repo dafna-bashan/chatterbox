@@ -13,7 +13,7 @@ export function ChatPreview({ currChatId, chat, loggedInUser, onLoadChat }) {
     <div className={currChatId === chat._id ? 'chat-preview current' : 'chat-preview'}>
       {isGroupChat ?
         <div className='flex align-center' onClick={() => onLoadChat(chat._id)}>
-          {chat.imgUrl ? <img src={chat.imgUrl} alt={chat.title} /> : <FontAwesomeIcon icon={faUserGroup} />}
+          {chat.imgUrl ? <img src={chat.imgUrl} alt={chat.title} /> : <div className="group-icon flex align-center justify-center"><FontAwesomeIcon icon={faUserGroup} /></div> }
           <div>
             <div>{chat.title}</div>
             {msgs.length ? <div className='last-msg'>{msgs[msgs.length - 1]?.from.firstName}: {msgs[msgs.length - 1]?.txt}</div> : null}

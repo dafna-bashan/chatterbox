@@ -1,6 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import userImg from '../assets/img/user-img.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserGroup } from '@fortawesome/free-solid-svg-icons'
 
 export function ChatHeader() {
 
@@ -15,7 +17,7 @@ export function ChatHeader() {
         <div className="chat-header full flex align-center">
             {isGroupChat ?
                 <div className='flex align-center'>
-                    <img src={currChat.imgUrl} alt={otherMembers[0]?.firstName} />
+                    {currChat.imgUrl ? <img src={currChat.imgUrl} alt={otherMembers[0]?.firstName} /> : <div className="group-icon flex align-center justify-center"><FontAwesomeIcon icon={faUserGroup} /></div>}
                     <div>
                         <div>{currChat?.title}</div>
                         <div className="members">

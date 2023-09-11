@@ -6,4 +6,19 @@
         font-size: 12px;
         color    : #5a5a5a;
     }
+
+    svg {
+        width : 25px;
+        height: 25px;
+        color: white;
+    }
+
+    .group-icon {
+        width              : 40px;
+        height             : 40px;
+        margin             : 0 10px;
+        border-radius      : 40px;
+        // object-fit      : cover;
+        background-color   : #e2e2e2;
+    }
 }

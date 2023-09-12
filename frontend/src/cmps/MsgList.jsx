@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { MsgPreview } from './MsgPreview'
 
-export function MsgList({ msgs, loggedInUser }) {
+export function MsgList({ msgs, loggedInUser, isGroupChat }) {
 
     const msgsEndRef = useRef(null)
 
@@ -10,12 +10,17 @@ export function MsgList({ msgs, loggedInUser }) {
     }
 
     useEffect(() => {
+        console.log(isGroupChat);
+    }, [msgs])
+    
+
+    useEffect(() => {
         scrollToBottom()
     }, [msgs?.length]);
 
     return (
         <div className="msg-list full">
-            {msgs && msgs.map((msg, idx) => <MsgPreview key={idx} msg={msg} loggedInUser={loggedInUser} />)}
+            {msgs && msgs.map((msg, idx) => <MsgPreview key={idx} msg={msg} loggedInUser={loggedInUser} isGroupChat={isGroupChat} />)}
             <div ref={msgsEndRef}></div>
         </div>
     )

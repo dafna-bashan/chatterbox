@@ -3,6 +3,7 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
 import { Loader } from './Loader';
 // import { useForm } from '../hooks/useForm'
+// import userImg from "../assets/img/user-img.png"
 
 export function AuthFormCmp({ type, title, btnTxt, submitFunc, bottomLine }) {
 
@@ -20,7 +21,8 @@ export function AuthFormCmp({ type, title, btnTxt, submitFunc, bottomLine }) {
         firstName: '',
         lastName: '',
         email: '',
-        password: ''
+        password: '',
+        imgUrl: "https://res.cloudinary.com/depjjubya/image/upload/v1694508874/noun-user_z4ou12.png"
     })
 
     useEffect(() => {

@@ -1,13 +1,13 @@
 import React from 'react'
 
-export function MsgPreview({ msg, loggedInUser }) {
+export function MsgPreview({ msg, loggedInUser, isGroupChat }) {
   return (
     <div className={loggedInUser._id === msg.from._id ? "msg-preview me" : "msg-preview"}>
       <div className={loggedInUser._id === msg.from._id ? "me" : "other"}>
         <div className="name">{msg.from.firstName}</div>
         <div className="msg">{msg.txt}</div>
       </div>
-
+      {isGroupChat && loggedInUser._id !== msg.from._id && <img src={msg.from.imgUrl} alt={msg.from.firstName} />}
     </div>
   )
 }

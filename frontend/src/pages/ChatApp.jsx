@@ -104,6 +104,7 @@ export function ChatApp() {
                 _id: loggedInUser._id,
                 firstName: loggedInUser.firstName,
                 lastName: loggedInUser.lastName,
+                imgUrl: loggedInUser.imgUrl
             },
             sent: Date.now()
         }
@@ -152,7 +153,7 @@ export function ChatApp() {
             <React.Fragment>
                 <ChatSideBar currChatId={currChat?._id} chats={chats} users={users} loggedInUser={loggedInUser} onAddChat={onAddChat} onLoadChat={onLoadChat} />
                 <div className="chat-container flex column full">
-                    <MsgList msgs={currChat?.msgs} loggedInUser={loggedInUser} />
+                    <MsgList msgs={currChat?.msgs} loggedInUser={loggedInUser} isGroupChat={currChat?.members.length > 2 ? true : false} />
                     {currChat?._id && <AddMsg msg={msg} handleChange={handleChange} sendMsg={sendMsg} />}
                     {!currChat?._id && <div className="welcome">Chatterbox</div>}
                 </div>

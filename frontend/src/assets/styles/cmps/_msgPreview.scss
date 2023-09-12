@@ -3,20 +3,32 @@
     font-size        : 14px;
     display          : flex;
     // flex-direction: column;
+    flex-direction   : row-reverse;
     justify-content  : flex-end;
 
-    >*:not(img) {
+    .txt {
         border-radius: 5px;
         padding      : 5px 10px;
         width        : fit-content;
+
+        &.me {
+            border-radius: 5px 0px 5px 5px;
+        }
+
+        &.other {
+            border-radius: 0px 5px 5px 5px;
+        }
     }
 
     &.me {
-        justify-content: flex-start;
+        justify-content: flex-end;
+        flex-direction : row;
+
     }
 
     .me {
         background-color: #ededed;
+
     }
 
     .other {
@@ -31,7 +43,27 @@
     img {
         width      : 28px;
         height     : 28px;
-        margin-left: 10px;
+        margin-left: 5px;
+    }
+
+    .triangle {
+        width       : 0px;
+        height      : 0px;
+        border-style: solid;
+
+        // border-color: #FFFFFF transparent transparent transparent;
+        &.me {
+            border-width    : 13px 13px 0 0;
+            border-color    : #ededed transparent transparent transparent;
+            background-color: transparent;
+        }
+
+        &.other {
+            border-width    : 0 13px 13px 0;
+            border-color    : transparent #FFFFFF transparent transparent;
+            background-color: transparent;
+
+        }
     }
 
 }

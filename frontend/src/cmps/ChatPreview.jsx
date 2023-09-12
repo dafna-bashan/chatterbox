@@ -1,5 +1,5 @@
 import React from 'react'
-import userImg from '../assets/img/user-img.png'
+import userImg from '../assets/img/noun-user-1.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserGroup } from '@fortawesome/free-solid-svg-icons'
 

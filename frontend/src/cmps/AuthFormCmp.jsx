@@ -22,7 +22,7 @@ export function AuthFormCmp({ type, title, btnTxt, submitFunc, bottomLine }) {
         lastName: '',
         email: '',
         password: '',
-        imgUrl: "https://res.cloudinary.com/depjjubya/image/upload/v1694508874/noun-user_z4ou12.png"
+        imgUrl: "https://res.cloudinary.com/depjjubya/image/upload/v1694518629/noun-user-1_bvkodt.png"
     })
 
     useEffect(() => {

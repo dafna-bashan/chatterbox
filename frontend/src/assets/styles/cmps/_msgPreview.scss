@@ -47,22 +47,22 @@
     }
 
     .triangle {
-        width       : 0px;
-        height      : 0px;
-        border-style: solid;
+        width           : 0px;
+        height          : 0px;
+        border-style    : solid;
+        background-color: transparent;
 
         // border-color: #FFFFFF transparent transparent transparent;
         &.me {
-            border-width    : 13px 13px 0 0;
-            border-color    : #ededed transparent transparent transparent;
-            background-color: transparent;
+            border-width           : 13px 8px 0 0;
+            border-color           : #ededed transparent transparent transparent;
+            border-top-right-radius: 2px;
         }
 
         &.other {
-            border-width    : 0 13px 13px 0;
-            border-color    : transparent #FFFFFF transparent transparent;
-            background-color: transparent;
-
+            border-width          : 0 8px 13px 0;
+            border-color          : transparent #FFFFFF transparent transparent;
+            border-top-left-radius: 2px;
         }
     }
 

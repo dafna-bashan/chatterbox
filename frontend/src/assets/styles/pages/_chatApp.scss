@@ -1,16 +1,17 @@
 .chat-app {
-    height: 92%;
+    height : calc(100vh - 65px);
+    // flex: 1;
 
     .chat-container {
         background-color: aliceblue;
         // overflow-y: scroll;
     }
 
-    .welcome{
-        display: flex;
-        height: 100%;
-        font-size: xx-large;
-        align-items: center;
+    .welcome {
+        display        : flex;
+        height         : 100%;
+        font-size      : xx-large;
+        align-items    : center;
         justify-content: center;
     }
 }

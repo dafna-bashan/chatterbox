@@ -1,6 +1,6 @@
 .chat-side-bar {
     width              : 350px;
-    // height: 90vh;
+    height             : 100%;
     // background-color: #bcbcbc;
     padding            : 0 15px;
     border-right       : 1px solid #e0e0e0;
@@ -11,7 +11,7 @@
         position        : absolute;
         bottom          : 0;
         left            : 175px;
-        transform: translateX(-50%);
+        transform       : translateX(-50%);
         background-color: #fff;
     }
 }

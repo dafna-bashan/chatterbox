@@ -149,7 +149,7 @@ export function ChatApp() {
 
     if (!loggedInUser) return <div></div>
     return (
-        <div className="chat-app flex full">
+        <div className="chat-app flex">
             <React.Fragment>
                 <ChatSideBar currChatId={currChat?._id} chats={chats} users={users} loggedInUser={loggedInUser} onAddChat={onAddChat} onLoadChat={onLoadChat} />
                 <div className="chat-container flex column full">

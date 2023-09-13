@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ClickAwayListener from '@mui/base/ClickAwayListener';
 import { useDispatch, useSelector } from 'react-redux'
-import userImg from '../assets/img/user-img.png'
+import userImg from '../assets/img/noun-user-1.png'
 import { UserManu } from './UserManu'
 import { ChatHeader } from './ChatHeader';
 import { logout } from '../store/actions/authActions';

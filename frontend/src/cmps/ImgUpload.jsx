@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { cloudinaryService } from '../services/cloudinaryService'
 
-export function ImgUpload({ defaultImgUrl, imgUrl, alt, onUploadImg }) {
+export function ImgUpload({ defaultImgUrl, imgUrl, alt, onUploadImg, customStyle }) {
 
     const [img, setImg] = useState({
         imgUrl: imgUrl || '',
@@ -31,7 +31,7 @@ export function ImgUpload({ defaultImgUrl, imgUrl, alt, onUploadImg }) {
     }
 
     return (
-        <div className="img-con flex align-center justify-center">
+        <div className={`img-con flex align-center justify-center ${customStyle}`}>
             <img className="upload" src={img?.imgUrl ? img.imgUrl : defaultImgUrl} alt={alt} />
             <input type="file" onChange={uploadImg} accept="image/*" id="imgUpload" style={{ display: "none" }} />
             <label htmlFor="imgUpload" className="img-label click">{uploadMsg()}</label>

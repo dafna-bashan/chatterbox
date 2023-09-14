@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { ImgUpload } from './ImgUpload'
-import groupImg from '../assets/img/noun-user-group-01.png'
+import groupImg from '../assets/img/user-group-solid.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
+import { faCircleCheck, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 export function GroupAdd({ setGroupCreation, onCreateChat }) {
 
@@ -23,13 +23,14 @@ export function GroupAdd({ setGroupCreation, onCreateChat }) {
 
     return (
         <div className="group-add">
-            <button onClick={() => setGroupCreation(false)}>Back</button>
-            <form className="flex column" onSubmit={(ev) => {
+            {/* <button onClick={() => setGroupCreation(false)}>Back</button> */}
+            <FontAwesomeIcon icon={faArrowLeft} onClick={() => setGroupCreation(false)} className="back-arrow"/>
+            <form className="flex column align-center justify-center" onSubmit={(ev) => {
                 ev.preventDefault()
                 console.log(groupDetails);
                 onCreateChat(groupDetails)
             }}>
-                <ImgUpload defaultImgUrl={groupImg} imgUrl="" alt="group image" onUploadImg={onUploadImg} />
+                <ImgUpload defaultImgUrl={groupImg} imgUrl="" alt="group image" onUploadImg={onUploadImg} customStyle="group"/>
                 <input type="text" name="title" placeholder="*Group title" required value={groupDetails.title} onChange={handleChange} />
                 <input type="text" name="description" placeholder="Group description" value={groupDetails.description} onChange={handleChange} />
                 <button disabled={groupDetails.title.length ? false : true}><FontAwesomeIcon icon={faCircleCheck} size="2xl" className="check-icon" /></button>

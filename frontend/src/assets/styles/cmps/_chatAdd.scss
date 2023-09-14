@@ -1,0 +1,14 @@
+.chat-add {
+
+    &.full-height {
+        height: calc(100vh - 65px);
+    }
+
+    .bottom {
+        height      : 100px;
+        // position : absolute;
+        // bottom   : 0;
+        // left     : 175px;
+        // transform: translateX(-50%);
+    }
+}

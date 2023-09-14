@@ -1,13 +1,17 @@
 .group-add {
     font-size: 14px;
+    
+    form{
+        height   : calc(100vh - 120px);
+    }
 
     input {
-        height          : 48px;
-        // width        : 350px;
-        border          : 1px solid #BDBDBD;
-        border-radius   : 8px;
-        padding-left    : 10px;
-        margin-bottom   : 25px;
+        height       : 48px;
+        width        : 300px;
+        border       : 1px solid #BDBDBD;
+        border-radius: 8px;
+        padding-left : 10px;
+        margin-bottom: 32px;
     }
 
     button {
@@ -28,5 +32,12 @@
         // position        : relative;
         // left            : 175px;
         // transform: translateX(-50%);
+    }
+
+    .back-arrow {
+        width     : 30px;
+        height    : 30px;
+        align-self: flex-start;
+        margin-top: 15px;
     }
 }

@@ -82,17 +82,17 @@ export function ChatAdd({ users, onAddChat, onToggleSearch, isSearching, loggedI
     }
 
     return (
-        <div className="chat-add flex column">
+        <div className={isSearching ? "chat-add flex column full-height" : "chat-add flex column"} >
             {!isCreatingGroup ? <React.Fragment>
                 <div className="flex align-center">
                     <SearchBar setSearchMode={setSearchMode} isSearching={isSearching} isGroupMode={isGroupMode} />
-                    <FontAwesomeIcon icon={faUserGroup} onClick={() => setSearchMode(true)} style={{color: "#3d434c"}}/>
+                    <FontAwesomeIcon icon={faUserGroup} onClick={() => setSearchMode(true)} style={{ color: "#3d434c" }} />
                 </div>
                 {isGroupMode && groupMembers.length ? <GroupMembersList groupMembers={groupMembers} onRemoveMember={onRemoveMember} /> : null}
                 {isSearching ? <SearchResultsList results={filterUsers()} loggedInUser={loggedInUser} setSearchMode={setSearchMode} onSelectUser={onSelectUser} isGroupMode={isGroupMode} /> : null}
                 {isGroupMode && groupMembers.length ? <div className="bottom flex align-center justify-center">
-                    <FontAwesomeIcon className="groupMembers-arrow" icon={faCircleArrowRight} size="2xl" onClick={() => setGroupCreation(true)} /> 
-                </div>: null}
+                    <FontAwesomeIcon className="groupMembers-arrow" icon={faCircleArrowRight} size="2xl" onClick={() => setGroupCreation(true)} />
+                </div> : null}
             </React.Fragment> :
                 <GroupAdd setGroupCreation={setGroupCreation} onCreateChat={onCreateChat} />}
         </div>

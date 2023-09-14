@@ -1,6 +1,6 @@
 .img-con {
-    margin-bottom: 32px;
 
+    margin-bottom: 32px;
 
     .upload {
         width           : 150px;
@@ -17,6 +17,19 @@
 
         &.click {
             cursor: pointer;
+        }
+
+    }
+
+    &.group {
+        flex-direction: column;
+        .upload {
+            width           : 200px;
+            height          : 200px;
+            border-radius   : 200px;
+            margin-right : 0;
+            margin-bottom: 15px;
+
         }
     }
 

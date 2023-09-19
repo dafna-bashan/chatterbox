@@ -7,13 +7,13 @@ export function ChatSideBar({ currChatId, chats, users, loggedInUser, onAddChat,
 
     const [isSearching, setIsSearching] = useState(false)
 
-    function onToggleSearch(isSearching) {
+    function onSetSearch(isSearching) {
         setIsSearching(isSearching)
     }
     return (
         <div className="chat-side-bar flex column">
-            <ChatAdd users={users} onAddChat={onAddChat} onToggleSearch={onToggleSearch}
-                isSearching={isSearching} loggedInUser={loggedInUser}/>
+            <ChatAdd users={users} onAddChat={onAddChat} onSetSearch={onSetSearch}
+                isSearching={isSearching} loggedInUser={loggedInUser} />
             {!isSearching && <ChatList currChatId={currChatId} chats={chats} loggedInUser={loggedInUser} onLoadChat={onLoadChat} />}
         </div>
     )

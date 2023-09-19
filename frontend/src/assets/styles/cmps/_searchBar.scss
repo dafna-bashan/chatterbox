@@ -1,14 +1,16 @@
 .search-bar {
-    margin-right: 10px;
+    margin-right    : 10px;
+    background-color: #f0f0f0;
+    border-radius   : 10px;
+    margin          : 10px 0;
 
     input {
-        width           : 100%;
-        border-radius   : 10px;
-        background-color: #f0f0f0;
+        // width           : 100%;
+        flex            : 1;
+        padding         : 8px 20px;
         border          : none;
         font-size       : 14px;
-        padding         : 8px 20px;
-        margin          : 10px 0;
+        background-color: transparent;
 
         &:focus {
             outline: none;
@@ -16,9 +18,13 @@
     }
 
     &.active {
+        background-color: #dbdbdb;
+
         input {
-            background-color: #dbdbdb;
+            padding-left: 10px;
         }
     }
+
+
 
 }

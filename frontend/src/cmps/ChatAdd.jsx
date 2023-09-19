@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { SearchBar } from './SearchBar'
 import { SearchResultsList } from './SearchResultsList'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserGroup, faCircleArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faUserGroup, faCircleArrowRight, faMessage } from '@fortawesome/free-solid-svg-icons'
 import { GroupMembersList } from './GroupMembersList'
 import { GroupAdd } from './GroupAdd'
 
-
-export function ChatAdd({ users, onAddChat, onToggleSearch, isSearching, loggedInUser }) {
+export function ChatAdd({ users, onAddChat, onSetSearch, isSearching, loggedInUser }) {
 
     const [isGroupMode, setIsGroupMode] = useState(false)
     const [isCreatingGroup, setIsCreatingGroup] = useState(false)
@@ -15,11 +14,11 @@ export function ChatAdd({ users, onAddChat, onToggleSearch, isSearching, loggedI
 
     function setSearchMode(isGroupMode) {
         if (isSearching) {
-            onToggleSearch(false)
+            onSetSearch(false)
             setIsGroupMode(false)
             setGroupMembers([])
         } else {
-            onToggleSearch(true)
+            onSetSearch(true)
             setIsGroupMode(isGroupMode)
         }
     }
@@ -86,7 +85,7 @@ export function ChatAdd({ users, onAddChat, onToggleSearch, isSearching, loggedI
             {!isCreatingGroup ? <React.Fragment>
                 <div className="flex align-center">
                     <SearchBar setSearchMode={setSearchMode} isSearching={isSearching} isGroupMode={isGroupMode} />
-                    <FontAwesomeIcon icon={faUserGroup} onClick={() => setSearchMode(true)} style={{ color: "#3d434c" }} />
+                    {!isSearching && <FontAwesomeIcon icon={faUserGroup} onClick={() => setSearchMode(true)} title="New group" style={{ color: "#3d434c" }} />}
                 </div>
                 {isGroupMode && groupMembers.length ? <GroupMembersList groupMembers={groupMembers} onRemoveMember={onRemoveMember} /> : null}
                 {isSearching ? <SearchResultsList results={filterUsers()} loggedInUser={loggedInUser} setSearchMode={setSearchMode} onSelectUser={onSelectUser} isGroupMode={isGroupMode} /> : null}

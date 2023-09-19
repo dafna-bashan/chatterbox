@@ -1,4 +1,5 @@
 import React from 'react'
+import userImg from '../assets/img/noun-user-1.png'
 
 export function MsgPreview({ msg, loggedInUser, isGroupChat }) {
   return (
@@ -8,7 +9,8 @@ export function MsgPreview({ msg, loggedInUser, isGroupChat }) {
         <div className="msg">{msg.txt}</div>
       </div>
       <span className={loggedInUser._id === msg.from._id ? "triangle me" : "triangle other"}></span>
-      {isGroupChat && loggedInUser._id !== msg.from._id && <img src={msg.from.imgUrl} alt={msg.from.firstName} />}
+      {isGroupChat && loggedInUser._id !== msg.from._id &&
+        <img src={msg.from.imgUrl ? msg.from.imgUrl : userImg} alt={msg.from.firstName} />}
     </div>
   )
 }

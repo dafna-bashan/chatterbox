@@ -56,10 +56,22 @@ export function ChatApp() {
         }
     }, [])
 
+    useEffect(() => {
+        dispatch(loadChats(loggedInUser._id))
+    }, [currChat?.msgs?.length])
+
+    useEffect(() => {
+        console.log('curr chat', currChat);
+    }, [currChat?._id])
+
+    useEffect(() => {
+        onUpdateChatMembers()
+        dispatch(loadUsers())
+    }, [chats?.length])
+
     //TODO - BUGG, NOT ALWAYS LOADING, NOT LOADING THE CURR CHAT???
     // the currChat in going to the initial state when recieving the event. WHY???
     // in the redux devtool i can see the updated currChat details but in the logs it is the initial state.
-
 
     function onLoadChats(chatId) {
         console.log(`onLoadChats: chatid ${chatId} 'currchatid' ${currChat?._id}`);
@@ -73,10 +85,9 @@ export function ChatApp() {
         dispatch(loadChats(loggedInUser._id))
     }
 
-    useEffect(() => {
-        console.log('curr chat', currChat);
-    }, [currChat?._id])
-
+    function onLoadChat(chatId) {
+        dispatch(loadChat(chatId))
+    }
 
     function handleChange(ev) {
         const { name, value } = ev.target
@@ -138,14 +149,7 @@ export function ChatApp() {
         })
     }
 
-    useEffect(() => {
-        onUpdateChatMembers()
-        dispatch(loadUsers())
-    }, [chats?.length])
 
-    function onLoadChat(chatId) {
-        dispatch(loadChat(chatId))
-    }
 
     if (!loggedInUser) return <div></div>
     return (

@@ -16,7 +16,7 @@ async function query(userId) {
     try {
         // console.log(userId);
         const collection = await dbService.getCollection('chat')
-        var chats = await collection.find({ "members._id": userId }).toArray()
+        var chats = await collection.find({ "members._id": userId }).sort({ "msgs.sent": -1 }).toArray()
         var users = await userService.query()
         console.log('users', users);
         chats = chats.map(chat => {

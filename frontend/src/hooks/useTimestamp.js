@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 // Custom hook for formatting message timestamps
-export const useMessageTimestamp = (timestamp) => {
+export const useTimestamp = (timestamp) => {
     // State to store the formatted timestamp
     const [formattedTimestamp, setFormattedTimestamp] = useState({ hour: '', day: '' });
 

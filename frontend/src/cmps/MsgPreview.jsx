@@ -1,10 +1,10 @@
 import React from 'react'
 import userImg from '../assets/img/noun-user-1.png'
-import { useMessageTimestamp } from '../hooks/useTimestamp'
+import { useTimestamp } from '../hooks/useTimestamp'
 
 export function MsgPreview({ msg, loggedInUser, isGroupChat }) {
 
-  const [formattedTimestamp, formatTimestamp, setFormattedTimestamp] = useMessageTimestamp(msg.sent)
+  const [formattedTimestamp, formatTimestamp, setFormattedTimestamp] = useTimestamp(msg.sent)
 
   return (
     <div className={loggedInUser._id === msg.from._id ? "msg-preview me" : "msg-preview"}>

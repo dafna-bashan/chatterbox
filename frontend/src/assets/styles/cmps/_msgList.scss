@@ -1,6 +1,22 @@
 .msg-list {
     overflow-y: scroll;
 
+   > :first-child {
+        margin-top: 10px;
+    }
+
+    .day {
+
+        span {
+            color           : #54656f;
+            border-radius   : 5px;
+            padding         : 5px 10px;
+            background-color: #fafafa;
+            width           : fit-content;
+            font-size       : 12.5px;
+        }
+    }
+
     // * {
     //     overflow-anchor: none;
     // }
